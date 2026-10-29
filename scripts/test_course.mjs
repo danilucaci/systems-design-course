@@ -43,7 +43,7 @@ test('standalone page has no external scripts, styles, images, imports, or fetch
 test('all generated internal links and outline anchors resolve without duplicate IDs', () => {
   const ids = [...markup.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
   assert.equal(new Set(ids).size, ids.length, 'Duplicate element IDs');
-  const allowed = new Set([...ids, ...Object.keys(data.resources)]);
+  const allowed = new Set([...ids, ...Object.keys(data.resources), 'course-contents']);
   for (const match of markup.matchAll(/href="#([^"]+)"/g)) assert.ok(allowed.has(match[1]), `Missing anchor: ${match[1]}`);
   for (const lesson of data.lessons) {
     for (const section of lesson.sections) assert.ok(allowed.has(section.id), `Missing outline: ${section.id}`);
@@ -51,11 +51,29 @@ test('all generated internal links and outline anchors resolve without duplicate
 });
 
 test('working edition, disclosure controls, and exported sources remain accurate', () => {
-  assert.equal(data.lessons.length, 1);
+  assert.equal(data.lessons.length, manifest.lessons.filter(lesson => lesson.status === 'complete').length);
+  assert.equal(data.catalog.length, manifest.expected_lesson_count);
   assert.equal(data.expectedLessonCount, 98);
-  assert.match(markup, /1 complete lesson available/);
+  assert.ok(markup.includes(`${data.lessons.length} written`));
   assert.match(markup, /class="solutions"/);
   assert.match(markup, /class="worked-solution"/);
   assert.equal(data.markdown, fs.readFileSync(path.join(ROOT, 'System_Design_Fullstack_Masterclass.md'), 'utf8'));
   assert.equal(html, fs.readFileSync(path.join(ROOT, 'System_Design_Fullstack_Course.html'), 'utf8'));
+});
+
+test('every planned lesson is listed without a placeholder article', () => {
+  const planned = data.catalog.filter(lesson => lesson.status !== 'complete');
+  for (const lesson of planned) {
+    assert.ok(markup.includes(`id="planned-${lesson.id}"`));
+    assert.ok(!markup.includes(`data-lesson id="${lesson.id}"`));
+  }
+  assert.equal((markup.match(/class="module"/g) || []).length, manifest.modules.length);
+});
+
+test('reading controls and the section index are available in the simple layout', () => {
+  assert.match(markup, /aria-label="Increase text size"/);
+  assert.match(markup, /aria-label="Decrease text size"/);
+  assert.equal((markup.match(/class="section-index"/g) || []).length, data.lessons.length);
+  assert.match(markup, /data-action="download-markdown"/);
+  assert.doesNotMatch(markup, /hero-aside|hero-actions|brand-mark|Make the knowledge yours/);
 });

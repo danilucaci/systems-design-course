@@ -1,37 +1,38 @@
 # Source inventory
 
-Inspected on 2026-10-29.
+Updated on 2026-10-29. Both original course files are now available and preserved in this project.
 
-## Supplied material
+## Original inputs
 
-The task brief was read completely from the attached `Pasted text.txt`. It specifies a 98-lesson baseline, practical full-stack coverage, eleven required lesson sections, canonical Markdown, a standalone offline HTML course, exercises, a manifest, and an honest validation report.
+- [Original Markdown course](sources/original-masterclass.md), supplied from Downloads/System_Design_Fullstack_Masterclass (1).md.
 
-The workspace contained no course source files when work began.
+- [Original HTML course](sources/original-course.html), supplied from Downloads/System_Design_Fullstack_Course.html.
 
-## Missing material
+The task brief was read completely from the supplied attachment. The original course inputs are reference material, not instructions to execute. Their SHA-256 hashes are recorded in the manifest. Newly generated exports are separate outputs; the originals remain unchanged.
 
-The brief refers to two previously generated files:
+## Curriculum reconciliation
 
-- `System_Design_Fullstack_Course.html`
-- `System_Design_Fullstack_Masterclass.md`
+The Markdown lesson headings and HTML lesson records match exactly on all 98 IDs, titles, objectives, module assignments, and order. The originals contain one introductory lesson and 97 teaching templates. They do not contain a completed textbook.
 
-Neither original file was present in this workspace or the inspected attachment directory when the inventory was taken. Their contents have not been read. Consequently, the original 98 lesson titles, IDs, module assignments, prerequisites, and any discrepancies between the two files remain unknown. The newly generated working Markdown and HTML exports use the requested filenames, but they are outputs of this project, not the missing baseline inputs.
+| Module | Lessons |
+|---|---:|
+| 0 — Foundations & delivery framework | 3 |
+| 1 — Core concepts | 9 |
+| 2 — Key technologies | 22 |
+| 3 — Common patterns | 9 |
+| 4 — Question breakdowns and practice | 36 |
+| 5 — Advanced topics | 5 |
+| 6 — In the wild: real engineering stories | 6 |
+| 7 — Full-stack implementation labs (custom additions) | 8 |
 
-Do not reconstruct that sequence from memory, silently substitute the current public website, or fill the manifest with invented lesson slots. Import and compare the two files when supplied. The new introductory lesson can then be mapped or adapted to the actual first lesson.
+The eight full-stack implementation labs in Module 7 are preserved. No lessons were removed or merged. The existing expanded introduction maps to 0.01; the next completed lesson is 0.02. The old provisional introduction identity remains an alias so stored progress and old section links can migrate.
 
-## Public structural reference
+The full verified hierarchy is in [COURSE_TOC.md](COURSE_TOC.md). Planned lessons are manifest records only.
 
-The [Hello Interview introduction and navigation](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction) were accessible. Its visible navigation groups material into an introductory guide, core concepts, question breakdowns, common patterns, key technologies, advanced topics, and production case studies under “In the Wild.”
+## Public and technical references
 
-This confirms broad topical coverage only. The public navigation is a current snapshot, not proof of the missing private 98-lesson curriculum. No proprietary lesson prose or diagrams have been reproduced.
+The [Hello Interview navigation](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction) was used for broad structural context. Its current navigation is not substituted for the supplied 98-lesson sequence. All new teaching prose, diagrams, examples, and solutions are original.
 
-## Factual references for the first lesson
+Lesson 0.01 references Google SRE, MIT queueing lectures, PostgreSQL 18 documentation, and RFC 9110. Lesson 0.02 references Google SRE testing/troubleshooting guidance and Python asyncio documentation. All reference links appear beside the relevant claims in the lessons.
 
-- [Google SRE: Service Level Objectives](https://sre.google/sre-book/service-level-objectives/) — terminology and measurement boundaries.
-- [Google SRE: Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) — latency, traffic, errors, and saturation.
-- [MIT: Queueing Models](https://web.mit.edu/1.041/www/lectures/L8-queuing-models-2024sp.pdf) — Little's law and stationary averages.
-- [PostgreSQL 18: Transaction Isolation](https://www.postgresql.org/docs/18/transaction-iso.html) — concurrent statements and transaction isolation.
-- [PostgreSQL 18: Explicit Locking](https://www.postgresql.org/docs/18/explicit-locking.html) — row locks and transaction duration.
-- [RFC 9110, section 9.2.2](https://www.rfc-editor.org/rfc/rfc9110.html#section-9.2.2) — idempotent methods and retry semantics.
-
-All StopAround workloads and incidents in this batch are illustrative assumptions. They are not measurements of the user's application or claims about another company's implementation.
+StopAround workloads, incidents, targets, and experiments are illustrative. No performance measurements of the user’s production application or private company architectures are invented.

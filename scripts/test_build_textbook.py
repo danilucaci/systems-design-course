@@ -9,19 +9,24 @@ from build_textbook import ROOT, build, render
 
 class TextbookTests(unittest.TestCase):
     def test_full_lesson_and_solution_are_preserved(self):
-        lesson = json.loads((ROOT / "course-manifest.json").read_text())["lessons"][0]
-        expected = "\n\n".join((ROOT / lesson[key]).read_text().strip()
-                                 for key in ("path", "exercise_solution_path"))
-        actual = build().split(f'<a id="{lesson["id"]}"></a>', 1)[1]
+        lessons = [item for item in json.loads((ROOT / "course-manifest.json").read_text())["lessons"] if item['status'] == 'complete']
+        book = build()
 
         def normalize(text):
             text = re.sub(r'^<a id="[^"]+"></a>\n\n', '', text, flags=re.M)
             text = re.sub(r'^#{1,6} ', '', text, flags=re.M)
             return re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text).strip()
 
-        self.assertEqual(normalize(actual), normalize(expected))
         blocks = lambda text: re.findall(r'^```[^\n]*\n.*?^```[^\n]*$', text, flags=re.M | re.S)
-        self.assertEqual(blocks(actual), blocks(expected))
+        for index, lesson in enumerate(lessons):
+            with self.subTest(lesson=lesson['id']):
+                expected = "\n\n".join((ROOT / lesson[key]).read_text().strip() for key in ("path", "exercise_solution_path"))
+                actual = book.split(f'<a id="{lesson["id"]}"></a>', 1)[1]
+                if index + 1 < len(lessons):
+                    actual = actual.split(f'<a id="{lessons[index + 1]["id"]}"></a>', 1)[0]
+                actual = re.split(r'<a id="module-\d+"></a>', actual, maxsplit=1)[0]
+                self.assertEqual(normalize(actual), normalize(expected))
+                self.assertEqual(blocks(actual), blocks(expected))
 
     def test_rebases_navigation_without_rewriting_code(self):
         code = '```python\n# Keep heading\n[code](#unchanged)\n```'

@@ -1,44 +1,44 @@
-# Senior Full-Stack System Design Masterclass
+# System design course
 
-This course is being written in small, reviewable batches. The target is the 98-lesson curriculum described in the supplied brief. The original Markdown and HTML courses have not been supplied, so their lesson titles, numbering, and module boundaries are not yet verified.
+A personal study reader for a senior frontend engineer developing senior full-stack skills.
 
-## First reading
+[Open the HTML reader](System_Design_Fullstack_Course.html) · [Read the textbook](System_Design_Fullstack_Masterclass.md) · [Full syllabus](COURSE_TOC.md)
 
-[Open the interactive HTML course](System_Design_Fullstack_Course.html). Open the file in a browser to read the full first lesson, explore its diagrams and capacity calculator, search the content, and track completion. It works without a server or internet connection; external reference links need internet access.
+## Start studying
 
-[Read the Markdown textbook — working edition](System_Design_Fullstack_Masterclass.md). It contains the first complete lesson and its worked exercise solution in one file.
+1. [0.01 — Introduction](lessons/module-00/01-from-features-to-systems.md)
+2. [0.02 — How to prepare](lessons/module-00/02-how-to-prepare.md)
 
-[From frontend features to production systems](lessons/module-00/01-from-features-to-systems.md) is a complete introductory lesson with an exercise, seven assessment questions, separate answers, and a tested Python workload model. Its placement in Module 0 is provisional until the original curriculum is available.
+Both lessons contain complete explanations, exercises, separate worked solutions, and assessment answers. The original syllabus has 98 lessons across eight modules. The other 96 lessons are planned; they have no placeholder lesson pages.
 
-## Project files
+The HTML file contains its own text, diagrams, code, styles, and scripts. It can be opened in a browser without a server. External reference links need internet access. Browser-tool checks use a local HTTP preview because the automation tool disallows direct file URLs.
 
-- [Source inventory](SOURCE_INVENTORY.md): available inputs, missing inputs, and reference hierarchy.
-- [Lesson specification](CONTENT_SPEC.md): the content and quality requirements for each lesson.
-- [Course manifest](course-manifest.json): machine-readable content status and validation.
-- [Validation report](COURSE_VALIDATION.md): measured progress and remaining limitations.
-- [Continuation checkpoint](CHECKPOINT.md): the exact next batch.
-- [First exercise solution](exercises/module-00/01-system-boundaries/SOLUTION.md): a worked requirements and capacity exercise.
+## Reading controls
 
-Run the introductory example from this directory with Python 3.10 or later:
+Body text starts at 20px with generous spacing. A− and A+ adjust it from 18px to 24px and also resize code and tables. Light and dark modes are available. Contents provides the full syllabus; On this page provides section links on every screen size. Solutions remain closed until you open them.
 
-```sh
-python3 exercises/module-00/01-system-boundaries/load_model.py
-python3 -m unittest discover -s exercises/module-00/01-system-boundaries -v
-```
+The reader remembers your lesson and section, completion, text size, and theme in browser storage. Existing provisional introduction IDs migrate to lesson 0.01. Sequential updates from another tab merge with the latest saved state. A failed write is reported beside the completion control; in-memory progress can still be exported. Export downloads JSON; progress import is not implemented.
 
-## Batch size
+## Background and source material
 
-Write one substantial lesson per batch initially. Finish its content, exercise, factual checks, and manifest update before starting the next. Larger batches can follow once the curriculum and lesson format are settled.
+- [Student background](STUDENT_PROFILE.md)
+- [Verified source inventory](SOURCE_INVENTORY.md)
+- [Content specification](CONTENT_SPEC.md)
+- [Machine-readable manifest](course-manifest.json)
+- [Validation report](COURSE_VALIDATION.md)
+- [Next writing checkpoint](CHECKPOINT.md)
 
-Rebuild the working exports from the canonical sources:
+## Rebuild and check
 
-```sh
+Use Python 3.10+ syntax support and Node.js 20 or later. No package installation is needed for the HTML build; its MIT-licensed Markdown parser is included.
+
+~~~sh
 python3 scripts/build_textbook.py
 node scripts/build_course.mjs
-```
+node --test scripts/test_course.mjs scripts/test_reader_state.mjs
+python3 -m unittest discover -s scripts -v
+python3 -m unittest discover -s exercises/module-00/01-system-boundaries -v
+python3 -m unittest discover -s exercises/module-00/02-how-to-prepare -v
+~~~
 
-The HTML build uses the included MIT-licensed Marked parser; no package installation is required. It embeds its styles, scripts, diagrams, lesson content, worked solution, and referenced project resources into one file. The two SVG diagrams are reviewed equivalents of the current Mermaid sources. The build rejects Mermaid blocks without a matching SVG in `course-ui/diagrams/manifest.json`.
-
-Both exports contain the content written so far. Completion is measured against the available lessons; the page separately displays the 98-lesson target. Browser storage is local to the browser and file/origin. The progress menu can export a JSON record or reset completion. Importing exported progress is not implemented.
-
-Run the HTML checks with `node --test scripts/test_course.mjs`. The [validation report](COURSE_VALIDATION.md) records browser checks and their limits.
+Add written content in curriculum order, one complete lesson per batch. Rebuild both exports from the canonical files. The build rejects Mermaid diagrams without corresponding reviewed offline SVG assets.

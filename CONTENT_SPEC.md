@@ -2,7 +2,7 @@
 
 ## Content ownership and identity
 
-One Markdown file is the canonical prose for each lesson. The manifest records its stable ID, module, path, status, prerequisites, exercise paths, references, and validation results. The original 98-lesson curriculum must be imported before assigning verified canonical IDs. Provisional content is counted separately.
+One Markdown file is the canonical prose for each written lesson. The manifest records its stable ID, original display number and title, module, path, status, prerequisites, exercise paths, and validation results. The 98-lesson curriculum has been verified against both preserved originals in sources/. Planned records preserve its structure without creating placeholder lesson files.
 
 Generate the eventual textbook and HTML lesson bodies from those same files. Include complete exercises and assessment answers. Keep executable examples beside their exercise solutions; verify that any complete code listing in a lesson matches its executable file.
 
@@ -39,6 +39,8 @@ Complete system-design problems must follow all seventeen steps in the brief, fr
 
 After each batch, check section presence, substantive content, question/answer coverage, local file links and explicit anchors, code execution, and calculations. Update the manifest, validation report, and checkpoint. Record what was actually tested and any manual or environmental limitations.
 
-Mermaid source remains in Markdown. The eventual HTML build must render diagrams using bundled assets or embedded SVG and work offline. Source inspection alone does not establish rendering correctness. HTML accessibility, navigation, storage, progress export/reset, and content parity require later browser checks.
+Mermaid source remains in Markdown. The HTML build uses reviewed, embedded SVG equivalents and rejects diagram sources without matching assets. The output works offline. Source inspection alone does not establish rendering correctness; browser checks must cover the changed diagrams and interactions.
+
+The reader serves one learner studying after work. Use 20px default body text with an 18–24px adjustment range, comfortable line length, generous line spacing, larger code, and quiet light/dark colors. Keep the section index and downloads usable on phones. Exclude promotional banners, logos, decorative cards, and sales-oriented copy. Preserve existing progress IDs through aliases when a lesson is mapped or renamed.
 
 Do not create empty lesson files to inflate progress. Missing source curriculum, unrendered diagrams, untested SQL, and incomplete exports remain explicit limitations.

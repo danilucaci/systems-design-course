@@ -1,6 +1,6 @@
-# From frontend features to production systems
+# Introduction
 
-Provisional Module 0 introduction · Lesson identity pending import of the original curriculum
+Lesson 0.01 · Foundations & delivery framework
 
 ## A. Learning objectives and prerequisites
 
@@ -8,7 +8,7 @@ After this lesson, you should be able to turn a feature description into a syste
 
 Prerequisites: experience delivering a web application, calling HTTP APIs, and interpreting basic application logs. No prior distributed-systems knowledge is assumed. Your existing frontend skills transfer: tracing state, defining component contracts, and measuring rendering performance all become useful across process boundaries.
 
-This lesson introduces concepts that later lessons will examine in detail: networking, API contracts, transactions, concurrency, capacity planning, and observability. Their exact lesson links will be assigned when the original curriculum is available. See the [source inventory](../../SOURCE_INVENTORY.md) for that limitation and the [exercise solution](../../exercises/module-00/01-system-boundaries/SOLUTION.md) after attempting the work.
+This lesson introduces concepts that later lessons examine in detail: networking, API contracts, transactions, concurrency, capacity planning, and observability. The [full course syllabus](../../COURSE_TOC.md) preserves all 98 lessons from the verified original curriculum. Continue with [0.02 — How to prepare](02-how-to-prepare.md), and see the [exercise solution](../../exercises/module-00/01-system-boundaries/SOLUTION.md) after attempting the work.
 
 ## B. Mental model and intuition
 
@@ -114,6 +114,8 @@ Read the sequence as a protocol requirement. It assumes the durable operation re
 ## E. Real-world examples
 
 For StopAround, freshness is part of answer quality. A quick response based on an old fuel observation may be less useful than a slightly slower one with a clear observation time. A reasonable product contract could display age and warn when observations exceed a threshold. The threshold is a product assumption to validate, not a universal database setting.
+
+The route-aware search also needs the driver's remaining range and fuel preference. A station near the route can still be unsuitable if it is beyond that range or does not supply the requested fuel. Those are business constraints to validate and test, independently of how quickly a spatial query returns rows. Keep the browser's presentation of reachability consistent with the backend's authoritative calculation.
 
 For an independent example, consider a workshop with ten remaining seats. A browser disabling its submit button reduces accidental repeated clicks, but two users and two tabs can still submit together. The authoritative capacity check belongs where concurrent reservations become durable. A safe mechanism must prevent accepted reservations from exceeding capacity; UI state alone cannot uphold that invariant.
 
@@ -273,4 +275,4 @@ Design begins with an operation, measurable promises, and invariants. Assign aut
 
 Choose additional infrastructure when its benefits address an observed or required constraint. For production ownership, you must be able to implement the contract, test competing operations, deploy a change, detect a failure, and recover safely. Recognizing component names is only the beginning.
 
-Return to the [course home](../../README.md), attempt the [exercise](#i-practical-exercise), or review the [solutions](#assessment-solutions). The next lesson will be selected from the verified curriculum; the current [checkpoint](../../CHECKPOINT.md) records what is needed before that selection.
+Continue with [0.02 — How to prepare](02-how-to-prepare.md), attempt the [exercise](#i-practical-exercise), or review the [solutions](#assessment-solutions). The [course syllabus](../../COURSE_TOC.md) links the full learning path, and the [checkpoint](../../CHECKPOINT.md) records the current batch.

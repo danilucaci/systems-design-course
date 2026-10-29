@@ -57,9 +57,10 @@ def build():
     parts = ["# Senior Full-Stack System Design Masterclass",
              f"Working edition · {len(ready)} written lesson(s) · Target: {manifest['expected_lesson_count']} lessons",
              "This partial edition contains the complete currently written lesson content and worked exercise solutions. "
-             "The original curriculum has not yet been verified; lesson placement remains provisional. "
+             "The original 98-lesson curriculum has been verified against both supplied sources. "
              "It is not the completed 98-lesson textbook.",
-             "## Contents"]
+             "See the [full syllabus](COURSE_TOC.md) for all 98 lessons and their writing status.",
+             "## Written lessons"]
     for module in modules:
         lessons = sorted((item for item in ready if item["module_id"] == module["id"]), key=lambda item: item["order"])
         if not lessons:

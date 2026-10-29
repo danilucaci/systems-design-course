@@ -1,73 +1,75 @@
-# Course validation — batch 1
+# Course validation — current batch
 
-Validated on 2026-10-29. This is an incomplete course with one fully written provisional introduction.
+Validated on 2026-10-29. The course is incomplete; two lessons are fully written.
 
-## Content inventory
+## Content and curriculum
 
 | Measure | Result |
 |---|---:|
-| Lessons expected by the supplied brief | 98 |
-| Original curriculum verified | No |
-| Lessons mapped to verified original curriculum | 0 |
-| Fully written provisional lessons | 1 |
-| Canonical lesson files currently written | 1, with provisional identity |
-| Lesson word count excluding fenced code and diagrams | 3,646 |
-| Substantial practical exercises | 1 |
-| Assessment questions / separate model answers | 7 / 7 |
-| Mermaid diagram sources | 2 |
+| Verified syllabus lessons | 98 |
+| Modules | 8 |
+| Fully written lessons | 2 |
+| Planned lessons without placeholder files | 96 |
+| Canonical lesson word count, excluding fenced blocks | 7,074 |
+| Combined textbook word estimate, including worked solutions | 8,865 |
+| Substantial exercises / worked solutions | 2 / 2 |
+| Assessment questions / separate answers | 14 / 14 |
+| Embedded SVG diagrams | 2 |
+| Additional text data-flow diagram | 1 |
+| Local Markdown links and fragments checked | 66 |
 
-The fully written lesson is [From frontend features to production systems](lessons/module-00/01-from-features-to-systems.md). Its file is the canonical prose for this new content, but its position in the original curriculum is unverified. No other lessons have been written, and none are represented by empty lesson files.
+Word counts are mechanical estimates outside fenced blocks and include headings, link destinations, and export anchor markup where present. They are a depth signal, not proof of teaching quality.
 
-Word count uses a mechanical word-token count outside fenced blocks, including headings and Markdown link text/destinations. It is approximate and is not a quality score. Supporting project documents and the separate exercise solution are excluded.
+Written lessons:
 
-## Checks performed
+- [0.01 — Introduction](lessons/module-00/01-from-features-to-systems.md): 3,699 words.
+- [0.02 — How to prepare](lessons/module-00/02-how-to-prepare.md): 3,375 words.
 
-- All eleven required content sections are present, plus a separate assessment-solutions section, in the specified order.
-- Seven numbered assessment questions each have a numbered model answer.
-- The lesson includes a worked mechanism discussion, trade-offs, failure diagnosis, capacity arithmetic, and a substantial exercise with a separate worked solution.
-- The complete Python listing matches its executable source file exactly after trimming outer whitespace.
-- All local Markdown file links and explicit fragment destinations resolve in the current source tree.
-- Manifest paths resolve, the provisional lesson ID is unique, and module references match.
-- The capacity model ran successfully and printed 4.6296 average requests/second, 37.0370 peak requests/second, and 11.1111 mean in-flight requests, rounded here for display.
-- Five Python unit tests passed: reference arithmetic, tenfold latency growth, zero volume, invalid assumptions, and overflow.
-- The two Mermaid sources were inspected for matching participants, dependencies, and the lost-response protocol. Reviewed SVG equivalents are embedded in the HTML and were rendered in the browser. The SVG-to-Mermaid source mapping is exact; a changed or unknown source requires a corresponding reviewed SVG before the HTML build succeeds.
-- Manual conceptual review checked measurement boundaries, mean-versus-percentile usage, process concurrency, PostgreSQL isolation references, retry uncertainty, and atomic deduplication assumptions.
-- Technical references were checked against primary documentation. All illustrative numbers and architectures are explicitly labeled.
-- Follow-up export: `System_Design_Fullstack_Masterclass.md` contains the complete first lesson and worked exercise solution. It is generated directly from their source files, with heading levels and link destinations adapted for the combined document.
-- Two textbook tests passed: complete source-content and fenced-block preservation, plus navigation rewriting without altering code. All 30 local links across the source tree and export resolved.
-- The standalone HTML working edition contains the full first lesson and worked solution, generated from their canonical Markdown. All canonical paragraphs, headings, table cells, and code blocks are checked for preservation.
-- Four HTML tests passed: content preservation, no external runtime assets or network calls, internal anchors without duplicate IDs, and accurate working-edition metadata/downloaded Markdown content. The export is reproducible from its sources.
-- Desktop rendering was inspected at 1440 × 960. Mobile rendering was inspected at 390 × 844 without document-level horizontal overflow. Wide code, tables, and diagrams have their own scrollable containers.
-- Search found text inside a closed worked solution; selecting the result opened the correct disclosure. Mobile search displayed a clear empty state for an unmatched query.
-- Completion and theme choices survived reload. Overall and module counters updated. Reset confirmation, cancellation, and confirmed reset were checked, and test completion was cleared afterward.
-- The capacity calculator returned 11.11 mean in-flight requests at 300 milliseconds and 111.11 at 3 seconds. An invalid multiplier displayed an error and cleared misleading results.
-- Progress export displayed success feedback. The downloaded file was not inspected end to end; the automation download wait was interrupted. Markdown download content matches the working textbook in the embedded data.
-- Mobile menu opening, closing via lesson selection, and focus on its close control were checked. Controls have labels, dialogs use native modal behavior, and a skip link is present. This is a manual accessibility smoke check, not a complete audit.
-- No browser error or warning logs were reported during the core checks.
+Both lessons have the required eleven content sections, a separate assessment-solutions section, seven questions and seven model answers, a substantial exercise, a separate worked solution, and an executable example.
 
-Re-run the executable checks from the repository root:
+The two preserved originals match on all 98 IDs, titles, objectives, module assignments, and order. Their hashes were verified. No lessons were removed or merged, including the eight practical full-stack labs. All planned lesson paths remain absent; the syllabus records are metadata, not fabricated lesson content.
 
-```sh
-python3 exercises/module-00/01-system-boundaries/load_model.py
-python3 -m unittest discover -s exercises/module-00/01-system-boundaries -v
+## Automated checks
+
+- Six HTML/content checks: source paragraph/heading/table/code preservation; offline assets; internal anchors without duplicate IDs; accurate export metadata; planned lesson catalogues without placeholder articles; and study controls without promotional panels.
+- Four reader-state checks: sequential stale-tab updates preserve completion; storage failures propagate; provisional IDs and anchors migrate; and invalid stored preferences are normalized.
+- Two textbook checks: every written lesson and solution survives assembly, including code blocks; navigation is rebased without rewriting code.
+- Four concurrency-probe checks: bounded active work without dropped operations, different overlap under serial/wide limits, zero work, and invalid inputs.
+- Five capacity-model checks passed. Together with the other suites, all 21 automated tests passed in this batch.
+- The new probe printed completed=10 with maximum-active values of 1, 2, and 10 for the respective limits. These are local scheduling results, not production performance benchmarks.
+- Canonical Python listings match their executable files. Both manifest source hashes, planned/written file status, and current local file links were checked.
+
+## Reader and browser checks
+
+The reader now uses 20px default body text, adjustable from 18px to 24px, with 1.8 line height. Code and table text follow the reading-size control. A 21px preference survived reload; code measured 17px at the restored 20px body setting. The main reading area is approximately 840px wide on a desktop viewport.
+
+Desktop checks used 1440 × 960; phone checks used 390 × 844. The phone document had no horizontal overflow. The section index remained available, opened, and navigated to the exercise. The full 98-lesson syllabus is available through Contents; planned entries are clearly marked.
+
+The reported diagram clipping was reproduced: a 900px SVG inside a 700px viewport. After the fix, both diagrams measured 840px within an 840px desktop container and 331px within a 331px phone container. Default diagrams fit without forced horizontal scrolling. Enlarge opens a separate view and returns the same SVG to the document on close without duplicated IDs.
+
+Navigation between lessons 0.01 and 0.02 works. Search found the planned Database indexing lesson and labeled it as not yet written. Existing hidden-solution search behavior and disclosure markup are retained. Completion changed to 1/2, survived reload, and its test record was cleared. No browser warning or error logs were reported during the current checks.
+
+There are no external runtime scripts, styles, fonts, images, API calls, or diagram-rendering services. The source Mermaid blocks are paired with reviewed SVG equivalents; unsupported new diagram sources fail the build rather than disappearing silently.
+
+## Remaining limits
+
+The other 96 lessons still need full teaching content. The next writing batch is 0.03 — Delivery framework. The final textbook/course definition of done is not satisfied.
+
+The browser tool disallows direct file URLs, so browser interactions were checked through a temporary loopback HTTP preview. Direct-file storage behavior and additional browser engines have not been verified. Storage is local to the browser and file/origin.
+
+Reader-state tests cover sequential stale-tab changes. Local storage is not a cross-process transactional database; simultaneous conflicting writes do not have a distributed-consistency guarantee.
+
+Progress JSON export is available; progress import is not implemented. The downloaded file was not inspected end to end. A full accessibility audit, real mobile devices, print behavior, cancellation of the toy Python workload, and real API/database/deployment integrations were not tested.
+
+## Re-run
+
+~~~sh
 python3 scripts/build_textbook.py
-python3 -m unittest discover -s scripts -v
 node scripts/build_course.mjs
-node --test scripts/test_course.mjs
-```
+node --test scripts/test_course.mjs scripts/test_reader_state.mjs
+python3 -m unittest discover -s scripts -v
+python3 -m unittest discover -s exercises/module-00/01-system-boundaries -v
+python3 -m unittest discover -s exercises/module-00/02-how-to-prepare -v
+~~~
 
-## Remaining limitations
-
-The two original course files are missing. Their complete 98-lesson sequence, exact module hierarchy, discrepancies, and practical full-stack module cannot yet be inventoried. There are no verified previous/next lesson destinations; the introduction links to the checkpoint instead of an invented next lesson.
-
-A partial combined Markdown textbook has been built. Source-content parity, unchanged fenced code/diagrams, and local links/anchors were checked for this export. Its internal exercise links resolve to the embedded worked solution. The title page identifies the edition as partial.
-
-The standalone HTML working edition is built and checked for the available lesson. Its previous/next controls are disabled at the current boundaries. Navigation across several lessons cannot be exercised until more lessons exist.
-
-The HTML has no external scripts, stylesheets, fonts, images, network fetches, or runtime diagram service. Reference links are optional external navigation. The browser automation tool disallows `file:` URLs, so direct-file storage behavior was not tested. Browser interactions were checked using the permitted local HTTP preview. Storage behavior varies by browser and origin; a visible warning handles unavailable local storage.
-
-The export provides progress JSON download and reset. Progress import is not implemented. The exported file was not inspected on disk. A complete accessibility audit, additional browser engines, print layout, and real mobile devices have not been checked.
-
-The Python program is a deterministic planning model, not a load test. No live API, PostgreSQL server, provider integration, concurrent-save implementation, or deployment has been exercised. These belong in the relevant later lessons. No production performance claims are made.
-
-The [checkpoint](CHECKPOINT.md) identifies the next small batch. The full project does not satisfy the definition of done yet.
+See [CHECKPOINT.md](CHECKPOINT.md) for the next small writing batch.

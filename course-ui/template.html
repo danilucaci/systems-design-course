@@ -1,41 +1,37 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  <meta name="description" content="A practical system design field guide for senior frontend engineers. Read, practise, and track your learning offline.">
-  <title>System Design — Full-Stack Field Guide</title>
-  <style>{{STYLES}}</style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>System design · Study reader</title><style>{{STYLES}}</style>
 </head>
 <body>
-  <a class="skip-link" href="#lesson-content">Skip to lesson</a>
-  <button class="menu-backdrop" type="button" aria-label="Close navigation" hidden></button>
-  <aside class="sidebar" id="sidebar" aria-label="Course navigation">
-    <div class="brand"><span class="brand-mark" aria-hidden="true">S<span>↗</span></span><div>System Design<small>THE FULL-STACK FIELD GUIDE</small></div><button class="mobile-close icon-button" type="button" aria-label="Close navigation">×</button></div>
-    <div class="sidebar-intro"><span class="eyebrow">YOUR NEXT CHAPTER</span><p>From building interfaces<br>to owning the whole system.</p></div>
-    <div class="learning-progress"><div><span>Your learning</span><strong data-progress-count>0 / 1</strong></div><progress class="course-progress" data-progress-bar max="1" value="0" aria-label="Completion of available lessons"></progress><p data-progress-description>0 of 1 available lessons completed</p></div>
-    <nav class="curriculum" aria-label="Modules and lessons">{{NAVIGATION}}</nav>
-    <div class="sidebar-footer"><div class="edition"><i aria-hidden="true"></i>Working edition <span>{{AVAILABLE}} / {{EXPECTED}} lessons available</span></div><button class="sidebar-action" type="button" data-action="export">↓ <span>Export progress</span></button><button class="sidebar-action" type="button" data-action="reset">↺ <span>Reset progress</span></button><p>Progress is saved in this browser.<br>Export a copy to keep it with you.</p></div>
-  </aside>
-  <div class="workspace" id="workspace">
-    <header class="topbar"><div class="breadcrumb"><button class="icon-button mobile-menu" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Open navigation">☰</button><span>MASTERCLASS</span><span aria-hidden="true">/</span><span id="breadcrumb-module">Orientation</span></div><div class="top-actions"><button class="search-trigger" type="button" data-action="search" aria-label="Search the course"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Search the course</span><kbd>⌘ K</kbd></button><button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">◐</button></div></header>
-    <div class="reading-track" aria-hidden="true"><div id="reading-fill"></div></div>
-    <div class="storage-warning" id="storage-warning" role="status" hidden>Your browser could not save progress. Use “Export progress” to keep a copy before closing this page.</div>
-    <main id="lesson-content" tabindex="-1">
-      <div class="content-layout"><div class="lesson-column">
-        <div class="edition-note"><span class="status-dot" aria-hidden="true"></span><strong>Built one lesson at a time.</strong><span>{{AVAILABLE}} complete lesson available. The {{EXPECTED}}-lesson curriculum is being developed.</span></div>
-        {{LESSONS}}
-      </div><aside class="page-outline" aria-label="On this page"><p class="eyebrow">ON THIS PAGE</p><nav id="page-outline"></nav><div class="offline-note"><span aria-hidden="true">↙</span><strong>Take it offline.</strong><p>This entire lesson, its code, and diagrams live in this one HTML file.</p><button type="button" class="text-button" data-action="download-markdown">Download Markdown ↓</button></div></aside></div>
-    </main>
-    <footer class="page-footer"><span>Understand it. Build it. Operate it.</span><span>Independent learning · No account needed</span></footer>
-  </div>
-  <dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title"><div class="dialog-heading"><h2 id="search-title">Find your next insight</h2><button class="icon-button" type="button" data-close-dialog aria-label="Close search">×</button></div><label class="search-field"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="course-search" type="search" placeholder="Try “retries”, “latency”, or “transactions”…" autocomplete="off" aria-label="Search lesson titles and full content"></label><p class="search-status" id="search-status" role="status">Search lesson text, exercises, and solutions.</p><div id="search-results" class="search-results"></div><p class="dialog-footnote">Search works entirely offline. <kbd>Esc</kbd> to close.</p></dialog>
-  <dialog id="reset-dialog" class="small-dialog" aria-labelledby="reset-title"><h2 id="reset-title">Start a fresh learning record?</h2><p>This clears completed lessons in this browser. You can export a copy first.</p><div class="dialog-buttons"><button class="secondary-button" type="button" data-action="export">Export progress</button><button class="secondary-button" type="button" data-close-dialog>Keep progress</button><button class="primary-button" type="button" id="confirm-reset">Reset progress</button></div></dialog>
-  <dialog id="resource-dialog" class="resource-dialog" aria-labelledby="resource-title"><div class="dialog-heading"><h2 id="resource-title">Course resource</h2><button class="icon-button" type="button" data-close-dialog aria-label="Close resource">×</button></div><pre id="resource-content" tabindex="0"></pre><button class="secondary-button" type="button" id="download-resource">Download this file ↓</button></dialog>
-  <div class="toast" id="toast" role="status" hidden></div>
-  <noscript><div class="noscript-note">JavaScript is disabled. The lesson and expandable solutions are readable below; search, themes, and progress tracking require JavaScript.</div></noscript>
-  <script type="application/json" id="course-data">{{DATA}}</script>
-  <script>{{SCRIPT}}</script>
-</body>
-</html>
+<a class="skip-link" href="#lesson-content">Skip to lesson</a>
+<button class="menu-backdrop" type="button" aria-label="Close navigation" hidden></button>
+<aside class="sidebar" id="sidebar" aria-label="Course contents">
+  <div class="sidebar-heading"><h2>Course contents</h2><button class="mobile-close icon-button" type="button" aria-label="Close navigation">×</button></div>
+  <p class="course-status">{{AVAILABLE}} written · {{EXPECTED}} in the syllabus</p>
+  <div class="learning-progress"><span data-progress-description>0 of {{AVAILABLE}} written lessons completed</span><progress data-progress-bar max="{{AVAILABLE}}" value="0" aria-label="Completion of written lessons"></progress><span class="sr-only" data-progress-count>0 / {{AVAILABLE}}</span></div>
+  <nav class="curriculum" aria-label="Modules and lessons">{{NAVIGATION}}</nav>
+  <div class="sidebar-footer"><button type="button" data-action="download-markdown">Download textbook</button><button type="button" data-action="export">Export progress</button><button type="button" data-action="reset">Reset progress</button><p>Saved in this browser. Planned lessons have no lesson text yet.</p></div>
+</aside>
+<div class="workspace" id="workspace">
+  <header class="topbar">
+    <div class="top-navigation"><button class="contents-toggle" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Open navigation">Contents</button><span id="breadcrumb-module">Foundations</span></div>
+    <div class="reading-controls"><button type="button" data-action="search" aria-label="Search the course">Search</button><span class="control-separator" aria-hidden="true"></span><button type="button" data-text-size="-1" aria-label="Decrease text size">A−</button><button type="button" data-text-size="1" aria-label="Increase text size">A+</button><button class="theme-toggle" type="button" aria-label="Switch to dark mode">Dark</button></div>
+  </header>
+  <div class="storage-warning" id="storage-warning" role="status" hidden>Browser storage is unavailable. Changes are kept for this session; export progress before closing.</div>
+  <main id="lesson-content" tabindex="-1"><div class="reading-column">{{LESSONS}}</div></main>
+</div>
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title">
+  <div class="dialog-heading"><h2 id="search-title">Search the course</h2><button class="icon-button" type="button" data-close-dialog aria-label="Close search">×</button></div>
+  <label for="course-search" class="sr-only">Search lesson titles and full content</label><input id="course-search" type="search" name="course-search" placeholder="Try “transactions” or “retries”…" autocomplete="off">
+  <p id="search-status" class="secondary-text" role="status">Search written content and the full syllabus.</p><div id="search-results"></div>
+</dialog>
+<dialog id="reset-dialog" class="small-dialog" aria-labelledby="reset-title"><h2 id="reset-title">Reset completed lessons?</h2><p>This clears completion in this browser. Export a copy first if you want to keep the record.</p><div class="dialog-buttons"><button type="button" data-action="export">Export progress</button><button type="button" data-close-dialog>Keep progress</button><button class="primary-button" type="button" id="confirm-reset">Reset progress</button></div></dialog>
+<dialog id="resource-dialog" class="resource-dialog" aria-labelledby="resource-title"><div class="dialog-heading"><h2 id="resource-title">Course resource</h2><button class="icon-button" type="button" data-close-dialog aria-label="Close resource">×</button></div><pre id="resource-content" tabindex="0"></pre><button type="button" id="download-resource">Download this file</button></dialog>
+<dialog id="diagram-dialog" class="diagram-dialog" aria-labelledby="diagram-title"><div class="dialog-heading"><h2 id="diagram-title">Diagram</h2><button class="icon-button" type="button" data-close-dialog aria-label="Close diagram">×</button></div><div id="diagram-content" class="diagram diagram-viewport" tabindex="0" role="region" aria-label="Enlarged diagram; scroll to see more"></div></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+<noscript><p class="noscript-note">The lessons and solutions can be read without JavaScript. Search, text controls, and saved progress need JavaScript.</p></noscript>
+<script type="application/json" id="course-data">{{DATA}}</script>
+<script>{{SCRIPT}}</script>
+</body></html>

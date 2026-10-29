@@ -3,41 +3,86 @@
   "title": "Senior Full-Stack System Design Masterclass",
   "updated_on": "2026-10-29",
   "expected_lesson_count": 98,
-  "curriculum_verified": false,
-  "curriculum_status": "awaiting_original_markdown_and_html",
-  "verified_canonical_lesson_count": 0,
-  "fully_written_provisional_lesson_count": 1,
-  "total_lesson_word_count": 3646,
-  "missing_inputs": [
-    "System_Design_Fullstack_Masterclass.md",
-    "System_Design_Fullstack_Course.html"
-  ],
-  "missing_input_context": "Original 98-lesson baseline versions, not newly generated working exports",
+  "curriculum_verified": true,
+  "curriculum_status": "verified_against_both_originals",
+  "verified_canonical_lesson_count": 2,
+  "fully_written_provisional_lesson_count": 0,
+  "total_lesson_word_count": 7074,
+  "missing_inputs": [],
+  "missing_input_context": null,
   "modules": [
     {
-      "id": "provisional-module-00",
-      "title": "Orientation",
+      "id": "module-0",
+      "title": "Foundations & delivery framework",
       "order": 0,
-      "curriculum_mapping_verified": false
+      "expected_lesson_count": 3,
+      "curriculum_mapping_verified": true
+    },
+    {
+      "id": "module-1",
+      "title": "Core concepts",
+      "order": 1,
+      "expected_lesson_count": 9,
+      "curriculum_mapping_verified": true
+    },
+    {
+      "id": "module-2",
+      "title": "Key technologies",
+      "order": 2,
+      "expected_lesson_count": 22,
+      "curriculum_mapping_verified": true
+    },
+    {
+      "id": "module-3",
+      "title": "Common patterns",
+      "order": 3,
+      "expected_lesson_count": 9,
+      "curriculum_mapping_verified": true
+    },
+    {
+      "id": "module-4",
+      "title": "Question breakdowns and practice",
+      "order": 4,
+      "expected_lesson_count": 36,
+      "curriculum_mapping_verified": true
+    },
+    {
+      "id": "module-5",
+      "title": "Advanced topics",
+      "order": 5,
+      "expected_lesson_count": 5,
+      "curriculum_mapping_verified": true
+    },
+    {
+      "id": "module-6",
+      "title": "In the wild: real engineering stories",
+      "order": 6,
+      "expected_lesson_count": 6,
+      "curriculum_mapping_verified": true
+    },
+    {
+      "id": "module-7",
+      "title": "Full-stack implementation labs (custom additions)",
+      "order": 7,
+      "expected_lesson_count": 8,
+      "curriculum_mapping_verified": true
     }
   ],
   "lessons": [
     {
-      "id": "provisional-m0-01",
-      "title": "From frontend features to production systems",
-      "module_id": "provisional-module-00",
+      "id": "lesson-0-01",
+      "display_id": "0.01",
+      "title": "Introduction",
+      "objective": "What system design is, real-world ownership versus interviews, trade-offs",
+      "module_id": "module-0",
       "order": 1,
       "category": "introduction",
       "path": "lessons/module-00/01-from-features-to-systems.md",
-      "status": "written_pending_curriculum_mapping",
+      "status": "complete",
       "prerequisites": [],
-      "next_lesson_id": null,
-      "exercise_solution_path": "exercises/module-00/01-system-boundaries/SOLUTION.md",
-      "executable_paths": [
-        "exercises/module-00/01-system-boundaries/load_model.py",
-        "exercises/module-00/01-system-boundaries/test_load_model.py"
-      ],
-      "word_count": 3646,
+      "prerequisites_status": "verified",
+      "next_lesson_id": "lesson-0-02",
+      "word_count": 3699,
       "validation": {
         "required_sections": "passed",
         "local_links": "passed",
@@ -48,6 +93,1777 @@
         "python_tests": "passed_5_tests",
         "code_listing_parity": "passed",
         "conceptual_review": "manual_review_passed"
+      },
+      "aliases": [
+        "provisional-m0-01"
+      ],
+      "exercise_solution_path": "exercises/module-00/01-system-boundaries/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-00/01-system-boundaries/load_model.py",
+        "exercises/module-00/01-system-boundaries/test_load_model.py"
+      ],
+      "interactive_example": "load_model"
+    },
+    {
+      "id": "lesson-0-02",
+      "display_id": "0.02",
+      "title": "How to prepare",
+      "objective": "A deliberate learning loop, practice, feedback, and depth",
+      "module_id": "module-0",
+      "order": 2,
+      "category": "introduction",
+      "path": "lessons/module-00/02-how-to-prepare.md",
+      "status": "complete",
+      "prerequisites": [
+        "lesson-0-01"
+      ],
+      "prerequisites_status": "verified",
+      "next_lesson_id": "lesson-0-03",
+      "word_count": 3375,
+      "validation": {
+        "content": "not_written",
+        "required_sections": "passed",
+        "assessment_question_count": 7,
+        "assessment_answer_count": 7,
+        "code_listing_parity": "passed",
+        "conceptual_review": "manual_review_passed",
+        "mermaid_diagram_count": 0,
+        "local_links": "passed",
+        "python_tests": "passed_4_tests",
+        "mermaid_rendering": "not_applicable_ascii_data_flow"
+      },
+      "exercise_solution_path": "exercises/module-00/02-how-to-prepare/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-00/02-how-to-prepare/concurrency_probe.py",
+        "exercises/module-00/02-how-to-prepare/test_concurrency_probe.py"
+      ]
+    },
+    {
+      "id": "lesson-0-03",
+      "display_id": "0.03",
+      "title": "Delivery framework",
+      "objective": "Requirements, entities, APIs, data flows, high-level design, deep dives",
+      "module_id": "module-0",
+      "order": 3,
+      "category": "introduction",
+      "path": "lessons/module-00/03-delivery-framework.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-1-01",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-1-01",
+      "display_id": "1.01",
+      "title": "Networking essentials",
+      "objective": "DNS, TCP, TLS, HTTP, CDNs, latency, timeouts",
+      "module_id": "module-1",
+      "order": 1,
+      "category": "core_concept",
+      "path": "lessons/module-01/01-networking-essentials.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-1-02",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-1-02",
+      "display_id": "1.02",
+      "title": "API design",
+      "objective": "REST, resource contracts, auth, idempotency, pagination, versioning",
+      "module_id": "module-1",
+      "order": 2,
+      "category": "core_concept",
+      "path": "lessons/module-01/02-api-design.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-1-03",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-1-03",
+      "display_id": "1.03",
+      "title": "Data modeling",
+      "objective": "Entities, relationships, constraints, normalization, transactions",
+      "module_id": "module-1",
+      "order": 3,
+      "category": "core_concept",
+      "path": "lessons/module-01/03-data-modeling.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-1-04",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-1-04",
+      "display_id": "1.04",
+      "title": "Caching",
+      "objective": "Cache placement, TTL, invalidation, consistency, stampedes",
+      "module_id": "module-1",
+      "order": 4,
+      "category": "core_concept",
+      "path": "lessons/module-01/04-caching.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-1-05",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-1-05",
+      "display_id": "1.05",
+      "title": "Sharding",
+      "objective": "Partition keys, hotspots, rebalancing, operational cost",
+      "module_id": "module-1",
+      "order": 5,
+      "category": "core_concept",
+      "path": "lessons/module-01/05-sharding.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-1-06",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-1-06",
+      "display_id": "1.06",
+      "title": "Consistent hashing",
+      "objective": "Distribution, virtual nodes, scale-in/out",
+      "module_id": "module-1",
+      "order": 6,
+      "category": "core_concept",
+      "path": "lessons/module-01/06-consistent-hashing.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-1-07",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-1-07",
+      "display_id": "1.07",
+      "title": "CAP theorem",
+      "objective": "Consistency, availability, partitions, eventual convergence",
+      "module_id": "module-1",
+      "order": 7,
+      "category": "core_concept",
+      "path": "lessons/module-01/07-cap-theorem.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-1-08",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-1-08",
+      "display_id": "1.08",
+      "title": "Database indexing",
+      "objective": "B-trees, composite indexes, query plans, write overhead",
+      "module_id": "module-1",
+      "order": 8,
+      "category": "core_concept",
+      "path": "lessons/module-01/08-database-indexing.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-1-09",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-1-09",
+      "display_id": "1.09",
+      "title": "Numbers to know",
+      "objective": "Throughput, latency, storage, rough capacity estimates",
+      "module_id": "module-1",
+      "order": 9,
+      "category": "core_concept",
+      "path": "lessons/module-01/09-numbers-to-know.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-01",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-01",
+      "display_id": "2.01",
+      "title": "Core database",
+      "objective": "What persistence must guarantee",
+      "module_id": "module-2",
+      "order": 1,
+      "category": "technology",
+      "path": "lessons/module-02/01-core-database.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-02",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-02",
+      "display_id": "2.02",
+      "title": "Relational databases",
+      "objective": "SQL, relational integrity, ACID, isolation",
+      "module_id": "module-2",
+      "order": 2,
+      "category": "technology",
+      "path": "lessons/module-02/02-relational-databases.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-03",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-03",
+      "display_id": "2.03",
+      "title": "NoSQL databases",
+      "objective": "Access patterns, key-value, document and wide-column systems",
+      "module_id": "module-2",
+      "order": 3,
+      "category": "technology",
+      "path": "lessons/module-02/03-nosql-databases.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-04",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-04",
+      "display_id": "2.04",
+      "title": "Blob storage",
+      "objective": "Object stores, signed uploads and CDN delivery",
+      "module_id": "module-2",
+      "order": 4,
+      "category": "technology",
+      "path": "lessons/module-02/04-blob-storage.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-05",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-05",
+      "display_id": "2.05",
+      "title": "Search-optimized database",
+      "objective": "Inverted indexes and search use cases",
+      "module_id": "module-2",
+      "order": 5,
+      "category": "technology",
+      "path": "lessons/module-02/05-search-optimized-database.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-06",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-06",
+      "display_id": "2.06",
+      "title": "API gateway",
+      "objective": "Routing, rate limits and authentication boundaries",
+      "module_id": "module-2",
+      "order": 6,
+      "category": "technology",
+      "path": "lessons/module-02/06-api-gateway.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-07",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-07",
+      "display_id": "2.07",
+      "title": "Load balancer",
+      "objective": "L4 versus L7, health checks and failover",
+      "module_id": "module-2",
+      "order": 7,
+      "category": "technology",
+      "path": "lessons/module-02/07-load-balancer.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-08",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-08",
+      "display_id": "2.08",
+      "title": "Queue",
+      "objective": "Async processing, delivery semantics, poison messages",
+      "module_id": "module-2",
+      "order": 8,
+      "category": "technology",
+      "path": "lessons/module-02/08-queue.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-09",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-09",
+      "display_id": "2.09",
+      "title": "Streams and event sourcing",
+      "objective": "Logs, offsets, consumer groups and event history",
+      "module_id": "module-2",
+      "order": 9,
+      "category": "technology",
+      "path": "lessons/module-02/09-streams-and-event-sourcing.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-10",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-10",
+      "display_id": "2.10",
+      "title": "Distributed lock",
+      "objective": "Mutual exclusion, leases and fencing",
+      "module_id": "module-2",
+      "order": 10,
+      "category": "technology",
+      "path": "lessons/module-02/10-distributed-lock.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-11",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-11",
+      "display_id": "2.11",
+      "title": "Distributed cache",
+      "objective": "Replication, eviction and invalidation",
+      "module_id": "module-2",
+      "order": 11,
+      "category": "technology",
+      "path": "lessons/module-02/11-distributed-cache.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-12",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-12",
+      "display_id": "2.12",
+      "title": "CDN",
+      "objective": "Edge caching, cache-control, origin protection",
+      "module_id": "module-2",
+      "order": 12,
+      "category": "technology",
+      "path": "lessons/module-02/12-cdn.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-13",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-13",
+      "display_id": "2.13",
+      "title": "Redis deep dive",
+      "objective": "Data structures, caching and coordination",
+      "module_id": "module-2",
+      "order": 13,
+      "category": "technology",
+      "path": "lessons/module-02/13-redis-deep-dive.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-14",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-14",
+      "display_id": "2.14",
+      "title": "Elasticsearch deep dive",
+      "objective": "Inverted indexes, relevance, refresh delay",
+      "module_id": "module-2",
+      "order": 14,
+      "category": "technology",
+      "path": "lessons/module-02/14-elasticsearch-deep-dive.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-15",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-15",
+      "display_id": "2.15",
+      "title": "Kafka deep dive",
+      "objective": "Partitions, durable events, ordering and retries",
+      "module_id": "module-2",
+      "order": 15,
+      "category": "technology",
+      "path": "lessons/module-02/15-kafka-deep-dive.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-16",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-16",
+      "display_id": "2.16",
+      "title": "Temporal deep dive",
+      "objective": "Durable workflows and process recovery",
+      "module_id": "module-2",
+      "order": 16,
+      "category": "technology",
+      "path": "lessons/module-02/16-temporal-deep-dive.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-17",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-17",
+      "display_id": "2.17",
+      "title": "API Gateway deep dive",
+      "objective": "Gateway trade-offs and security",
+      "module_id": "module-2",
+      "order": 17,
+      "category": "technology",
+      "path": "lessons/module-02/17-api-gateway-deep-dive.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-18",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-18",
+      "display_id": "2.18",
+      "title": "Cassandra deep dive",
+      "objective": "Wide-column architecture and high-write workloads",
+      "module_id": "module-2",
+      "order": 18,
+      "category": "technology",
+      "path": "lessons/module-02/18-cassandra-deep-dive.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-19",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-19",
+      "display_id": "2.19",
+      "title": "DynamoDB deep dive",
+      "objective": "Partition keys, secondary indexes and capacity",
+      "module_id": "module-2",
+      "order": 19,
+      "category": "technology",
+      "path": "lessons/module-02/19-dynamodb-deep-dive.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-20",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-20",
+      "display_id": "2.20",
+      "title": "PostgreSQL deep dive",
+      "objective": "SQL, transactions, indexes, EXPLAIN, replication",
+      "module_id": "module-2",
+      "order": 20,
+      "category": "technology",
+      "path": "lessons/module-02/20-postgresql-deep-dive.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-21",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-21",
+      "display_id": "2.21",
+      "title": "Flink deep dive",
+      "objective": "Stream processing, event time and state",
+      "module_id": "module-2",
+      "order": 21,
+      "category": "technology",
+      "path": "lessons/module-02/21-flink-deep-dive.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-2-22",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-2-22",
+      "display_id": "2.22",
+      "title": "ZooKeeper deep dive",
+      "objective": "Coordination, watches and consensus context",
+      "module_id": "module-2",
+      "order": 22,
+      "category": "technology",
+      "path": "lessons/module-02/22-zookeeper-deep-dive.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-3-01",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-3-01",
+      "display_id": "3.01",
+      "title": "Real-time updates",
+      "objective": "Polling, SSE, WebSockets, connections and reconnection",
+      "module_id": "module-3",
+      "order": 1,
+      "category": "pattern",
+      "path": "lessons/module-03/01-real-time-updates.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-3-02",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-3-02",
+      "display_id": "3.02",
+      "title": "Dealing with contention",
+      "objective": "Optimistic concurrency, locking, queues",
+      "module_id": "module-3",
+      "order": 2,
+      "category": "pattern",
+      "path": "lessons/module-03/02-dealing-with-contention.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-3-03",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-3-03",
+      "display_id": "3.03",
+      "title": "Multi-step processes",
+      "objective": "Sagas, compensations, workflows and durable execution",
+      "module_id": "module-3",
+      "order": 3,
+      "category": "pattern",
+      "path": "lessons/module-03/03-multi-step-processes.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-3-04",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-3-04",
+      "display_id": "3.04",
+      "title": "Scaling reads",
+      "objective": "Read replicas, caches, denormalized projections",
+      "module_id": "module-3",
+      "order": 4,
+      "category": "pattern",
+      "path": "lessons/module-03/04-scaling-reads.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-3-05",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-3-05",
+      "display_id": "3.05",
+      "title": "Scaling writes",
+      "objective": "Partitioning, batching, buffering and backpressure",
+      "module_id": "module-3",
+      "order": 5,
+      "category": "pattern",
+      "path": "lessons/module-03/05-scaling-writes.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-3-06",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-3-06",
+      "display_id": "3.06",
+      "title": "Handling large blobs",
+      "objective": "Direct upload, multipart upload, metadata and CDN",
+      "module_id": "module-3",
+      "order": 6,
+      "category": "pattern",
+      "path": "lessons/module-03/06-handling-large-blobs.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-3-07",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-3-07",
+      "display_id": "3.07",
+      "title": "Managing long-running tasks",
+      "objective": "Jobs, queues, retries, visibility and status",
+      "module_id": "module-3",
+      "order": 7,
+      "category": "pattern",
+      "path": "lessons/module-03/07-managing-long-running-tasks.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-3-08",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-3-08",
+      "display_id": "3.08",
+      "title": "Proximity-based services",
+      "objective": "Spatial indexing, geohashes and nearest-neighbor queries",
+      "module_id": "module-3",
+      "order": 8,
+      "category": "pattern",
+      "path": "lessons/module-03/08-proximity-based-services.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-3-09",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-3-09",
+      "display_id": "3.09",
+      "title": "Pattern selection",
+      "objective": "Diagnosing bottlenecks before adding complexity",
+      "module_id": "module-3",
+      "order": 9,
+      "category": "pattern",
+      "path": "lessons/module-03/09-pattern-selection.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-01",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-01",
+      "display_id": "4.01",
+      "title": "Bitly",
+      "objective": "URL IDs, redirects and storage",
+      "module_id": "module-4",
+      "order": 1,
+      "category": "system_design",
+      "path": "lessons/module-04/01-bitly.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-02",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-02",
+      "display_id": "4.02",
+      "title": "Dropbox",
+      "objective": "File uploads, synchronization and metadata",
+      "module_id": "module-4",
+      "order": 2,
+      "category": "system_design",
+      "path": "lessons/module-04/02-dropbox.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-03",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-03",
+      "display_id": "4.03",
+      "title": "Local delivery service",
+      "objective": "Orders, assignment and tracking",
+      "module_id": "module-4",
+      "order": 3,
+      "category": "system_design",
+      "path": "lessons/module-04/03-local-delivery-service.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-04",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-04",
+      "display_id": "4.04",
+      "title": "Ticketmaster",
+      "objective": "Inventory, seat holds and high contention",
+      "module_id": "module-4",
+      "order": 4,
+      "category": "system_design",
+      "path": "lessons/module-04/04-ticketmaster.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-05",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-05",
+      "display_id": "4.05",
+      "title": "Facebook News Feed",
+      "objective": "Fanout and ranking",
+      "module_id": "module-4",
+      "order": 5,
+      "category": "system_design",
+      "path": "lessons/module-04/05-facebook-news-feed.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-06",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-06",
+      "display_id": "4.06",
+      "title": "Tinder",
+      "objective": "Matching, discovery and location",
+      "module_id": "module-4",
+      "order": 6,
+      "category": "system_design",
+      "path": "lessons/module-04/06-tinder.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-07",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-07",
+      "display_id": "4.07",
+      "title": "LeetCode",
+      "objective": "Sandboxed code execution and job orchestration",
+      "module_id": "module-4",
+      "order": 7,
+      "category": "system_design",
+      "path": "lessons/module-04/07-leetcode.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-08",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-08",
+      "display_id": "4.08",
+      "title": "WhatsApp",
+      "objective": "Messaging, delivery guarantees and offline devices",
+      "module_id": "module-4",
+      "order": 8,
+      "category": "system_design",
+      "path": "lessons/module-04/08-whatsapp.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-09",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-09",
+      "display_id": "4.09",
+      "title": "Rate limiter",
+      "objective": "Counters, token buckets and distributed coordination",
+      "module_id": "module-4",
+      "order": 9,
+      "category": "system_design",
+      "path": "lessons/module-04/09-rate-limiter.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-10",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-10",
+      "display_id": "4.10",
+      "title": "YouTube",
+      "objective": "Upload, transcoding and streaming",
+      "module_id": "module-4",
+      "order": 10,
+      "category": "system_design",
+      "path": "lessons/module-04/10-youtube.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-11",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-11",
+      "display_id": "4.11",
+      "title": "Facebook Live Comments",
+      "objective": "Real-time event delivery",
+      "module_id": "module-4",
+      "order": 11,
+      "category": "system_design",
+      "path": "lessons/module-04/11-facebook-live-comments.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-12",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-12",
+      "display_id": "4.12",
+      "title": "YouTube Top K",
+      "objective": "Streaming aggregation and top-k algorithms",
+      "module_id": "module-4",
+      "order": 12,
+      "category": "system_design",
+      "path": "lessons/module-04/12-youtube-top-k.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-13",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-13",
+      "display_id": "4.13",
+      "title": "Uber",
+      "objective": "Location, dispatch and matching",
+      "module_id": "module-4",
+      "order": 13,
+      "category": "system_design",
+      "path": "lessons/module-04/13-uber.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-14",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-14",
+      "display_id": "4.14",
+      "title": "Web crawler",
+      "objective": "URL scheduling, politeness and deduplication",
+      "module_id": "module-4",
+      "order": 14,
+      "category": "system_design",
+      "path": "lessons/module-04/14-web-crawler.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-15",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-15",
+      "display_id": "4.15",
+      "title": "Ad click aggregator",
+      "objective": "Event ingestion and time-window aggregation",
+      "module_id": "module-4",
+      "order": 15,
+      "category": "system_design",
+      "path": "lessons/module-04/15-ad-click-aggregator.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-16",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-16",
+      "display_id": "4.16",
+      "title": "Facebook Post Search",
+      "objective": "Indexing and distributed search",
+      "module_id": "module-4",
+      "order": 16,
+      "category": "system_design",
+      "path": "lessons/module-04/16-facebook-post-search.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-17",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-17",
+      "display_id": "4.17",
+      "title": "Yelp",
+      "objective": "Geo-search, reviews and ranking",
+      "module_id": "module-4",
+      "order": 17,
+      "category": "system_design",
+      "path": "lessons/module-04/17-yelp.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-18",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-18",
+      "display_id": "4.18",
+      "title": "Instagram",
+      "objective": "Media lifecycle and social feeds",
+      "module_id": "module-4",
+      "order": 18,
+      "category": "system_design",
+      "path": "lessons/module-04/18-instagram.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-19",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-19",
+      "display_id": "4.19",
+      "title": "Strava",
+      "objective": "Activity ingestion and geo data",
+      "module_id": "module-4",
+      "order": 19,
+      "category": "system_design",
+      "path": "lessons/module-04/19-strava.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-20",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-20",
+      "display_id": "4.20",
+      "title": "Distributed cache",
+      "objective": "Cache nodes, partitioning and eviction",
+      "module_id": "module-4",
+      "order": 20,
+      "category": "system_design",
+      "path": "lessons/module-04/20-distributed-cache.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-21",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-21",
+      "display_id": "4.21",
+      "title": "Online auction",
+      "objective": "Bidding, ordering and contention",
+      "module_id": "module-4",
+      "order": 21,
+      "category": "system_design",
+      "path": "lessons/module-04/21-online-auction.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-22",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-22",
+      "display_id": "4.22",
+      "title": "Job scheduler",
+      "objective": "Scheduling, execution and retries",
+      "module_id": "module-4",
+      "order": 22,
+      "category": "system_design",
+      "path": "lessons/module-04/22-job-scheduler.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-23",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-23",
+      "display_id": "4.23",
+      "title": "News aggregator",
+      "objective": "Ingestion, dedupe and ranking",
+      "module_id": "module-4",
+      "order": 23,
+      "category": "system_design",
+      "path": "lessons/module-04/23-news-aggregator.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-24",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-24",
+      "display_id": "4.24",
+      "title": "Price tracking service",
+      "objective": "Crawling, change detection and alerts",
+      "module_id": "module-4",
+      "order": 24,
+      "category": "system_design",
+      "path": "lessons/module-04/24-price-tracking-service.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-25",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-25",
+      "display_id": "4.25",
+      "title": "Notification system",
+      "objective": "Multi-channel delivery and preferences",
+      "module_id": "module-4",
+      "order": 25,
+      "category": "system_design",
+      "path": "lessons/module-04/25-notification-system.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-26",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-26",
+      "display_id": "4.26",
+      "title": "Robinhood",
+      "objective": "Quotes, orders and financial correctness",
+      "module_id": "module-4",
+      "order": 26,
+      "category": "system_design",
+      "path": "lessons/module-04/26-robinhood.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-27",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-27",
+      "display_id": "4.27",
+      "title": "Google Docs",
+      "objective": "Collaborative editing and concurrency",
+      "module_id": "module-4",
+      "order": 27,
+      "category": "system_design",
+      "path": "lessons/module-04/27-google-docs.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-28",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-28",
+      "display_id": "4.28",
+      "title": "Payment system",
+      "objective": "Idempotency, ledger design and reconciliation",
+      "module_id": "module-4",
+      "order": 28,
+      "category": "system_design",
+      "path": "lessons/module-04/28-payment-system.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-29",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-29",
+      "display_id": "4.29",
+      "title": "Metrics monitoring",
+      "objective": "High-cardinality ingestion and time series",
+      "module_id": "module-4",
+      "order": 29,
+      "category": "system_design",
+      "path": "lessons/module-04/29-metrics-monitoring.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-30",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-30",
+      "display_id": "4.30",
+      "title": "Online chess",
+      "objective": "Game state, timing and real-time moves",
+      "module_id": "module-4",
+      "order": 30,
+      "category": "system_design",
+      "path": "lessons/module-04/30-online-chess.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-31",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-31",
+      "display_id": "4.31",
+      "title": "ChatGPT",
+      "objective": "Request streaming, inference scheduling and conversation state",
+      "module_id": "module-4",
+      "order": 31,
+      "category": "system_design",
+      "path": "lessons/module-04/31-chatgpt.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-32",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-32",
+      "display_id": "4.32",
+      "title": "Flash sale",
+      "objective": "Traffic bursts, inventory and oversell prevention",
+      "module_id": "module-4",
+      "order": 32,
+      "category": "system_design",
+      "path": "lessons/module-04/32-flash-sale.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-33",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-33",
+      "display_id": "4.33",
+      "title": "Extra practice: food reviews",
+      "objective": "A service with reviews, discovery and moderation",
+      "module_id": "module-4",
+      "order": 33,
+      "category": "system_design",
+      "path": "lessons/module-04/33-extra-practice-food-reviews.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-34",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-34",
+      "display_id": "4.34",
+      "title": "Extra practice: game leaderboard",
+      "objective": "Rank storage and hot keys",
+      "module_id": "module-4",
+      "order": 34,
+      "category": "system_design",
+      "path": "lessons/module-04/34-extra-practice-game-leaderboard.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-35",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-35",
+      "display_id": "4.35",
+      "title": "Extra practice: donations",
+      "objective": "Donation processing and accounting",
+      "module_id": "module-4",
+      "order": 35,
+      "category": "system_design",
+      "path": "lessons/module-04/35-extra-practice-donations.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-4-36",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-4-36",
+      "display_id": "4.36",
+      "title": "Extra practice: GitHub Actions",
+      "objective": "Durable workflow jobs and execution fleets",
+      "module_id": "module-4",
+      "order": 36,
+      "category": "system_design",
+      "path": "lessons/module-04/36-extra-practice-github-actions.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-5-01",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-5-01",
+      "display_id": "5.01",
+      "title": "Proximity search",
+      "objective": "Spatial indexing and relevance",
+      "module_id": "module-5",
+      "order": 1,
+      "category": "advanced",
+      "path": "lessons/module-05/01-proximity-search.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-5-02",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-5-02",
+      "display_id": "5.02",
+      "title": "Vector databases",
+      "objective": "Embeddings, approximate nearest neighbors, hybrid search",
+      "module_id": "module-5",
+      "order": 2,
+      "category": "advanced",
+      "path": "lessons/module-05/02-vector-databases.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-5-03",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-5-03",
+      "display_id": "5.03",
+      "title": "Time-series databases",
+      "objective": "Retention, downsampling and high-volume writes",
+      "module_id": "module-5",
+      "order": 3,
+      "category": "advanced",
+      "path": "lessons/module-05/03-time-series-databases.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-5-04",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-5-04",
+      "display_id": "5.04",
+      "title": "Data structures for big data",
+      "objective": "Bloom filters, sketches and approximate counting",
+      "module_id": "module-5",
+      "order": 4,
+      "category": "advanced",
+      "path": "lessons/module-05/04-data-structures-for-big-data.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-5-05",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-5-05",
+      "display_id": "5.05",
+      "title": "Change data capture",
+      "objective": "WAL, outbox, event projections and replication",
+      "module_id": "module-5",
+      "order": 5,
+      "category": "advanced",
+      "path": "lessons/module-05/05-change-data-capture.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-6-01",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-6-01",
+      "display_id": "6.01",
+      "title": "Shopify inventory reservations",
+      "objective": "Inventory correctness under concurrency",
+      "module_id": "module-6",
+      "order": 1,
+      "category": "case_study",
+      "path": "lessons/module-06/01-shopify-inventory-reservations.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-6-02",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-6-02",
+      "display_id": "6.02",
+      "title": "Discord message storage",
+      "objective": "Message partitioning and access patterns",
+      "module_id": "module-6",
+      "order": 2,
+      "category": "case_study",
+      "path": "lessons/module-06/02-discord-message-storage.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-6-03",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-6-03",
+      "display_id": "6.03",
+      "title": "Slack job queue",
+      "objective": "Operational queues at scale",
+      "module_id": "module-6",
+      "order": 3,
+      "category": "case_study",
+      "path": "lessons/module-06/03-slack-job-queue.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-6-04",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-6-04",
+      "display_id": "6.04",
+      "title": "Figma multiplayer",
+      "objective": "Collaboration and concurrent edits",
+      "module_id": "module-6",
+      "order": 4,
+      "category": "case_study",
+      "path": "lessons/module-06/04-figma-multiplayer.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-6-05",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-6-05",
+      "display_id": "6.05",
+      "title": "Spotify data lake",
+      "objective": "Analytical pipelines and data evolution",
+      "module_id": "module-6",
+      "order": 5,
+      "category": "case_study",
+      "path": "lessons/module-06/05-spotify-data-lake.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-6-06",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-6-06",
+      "display_id": "6.06",
+      "title": "Meta ZGateway",
+      "objective": "Edge systems and service infrastructure",
+      "module_id": "module-6",
+      "order": 6,
+      "category": "case_study",
+      "path": "lessons/module-06/06-meta-zgateway.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-7-01",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-7-01",
+      "display_id": "7.01",
+      "title": "Backend foundations",
+      "objective": "FastAPI service, typed contracts and local environment",
+      "module_id": "module-7",
+      "order": 1,
+      "category": "practical_lab",
+      "path": "lessons/module-07/01-backend-foundations.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-7-02",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-7-02",
+      "display_id": "7.02",
+      "title": "SQL and transactions",
+      "objective": "PostgreSQL schema, migration, index, EXPLAIN and isolation",
+      "module_id": "module-7",
+      "order": 2,
+      "category": "practical_lab",
+      "path": "lessons/module-07/02-sql-and-transactions.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-7-03",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-7-03",
+      "display_id": "7.03",
+      "title": "Authentication and authorization",
+      "objective": "Identity, sessions, JWT trade-offs, RBAC and ownership checks",
+      "module_id": "module-7",
+      "order": 3,
+      "category": "practical_lab",
+      "path": "lessons/module-07/03-authentication-and-authorization.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-7-04",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-7-04",
+      "display_id": "7.04",
+      "title": "Caching and performance",
+      "objective": "Redis, cache policies, profiling and load testing",
+      "module_id": "module-7",
+      "order": 4,
+      "category": "practical_lab",
+      "path": "lessons/module-07/04-caching-and-performance.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-7-05",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-7-05",
+      "display_id": "7.05",
+      "title": "Background processing",
+      "objective": "Queue, idempotent worker, retries and dead-letter handling",
+      "module_id": "module-7",
+      "order": 5,
+      "category": "practical_lab",
+      "path": "lessons/module-07/05-background-processing.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-7-06",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-7-06",
+      "display_id": "7.06",
+      "title": "Infrastructure and deployment",
+      "objective": "Containers, CI/CD, environments and secrets",
+      "module_id": "module-7",
+      "order": 6,
+      "category": "practical_lab",
+      "path": "lessons/module-07/06-infrastructure-and-deployment.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-7-07",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-7-07",
+      "display_id": "7.07",
+      "title": "Reliability and security",
+      "objective": "Tracing, metrics, alerting, backups, threat modeling and recovery",
+      "module_id": "module-7",
+      "order": 7,
+      "category": "practical_lab",
+      "path": "lessons/module-07/07-reliability-and-security.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": "lesson-7-08",
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
+      }
+    },
+    {
+      "id": "lesson-7-08",
+      "display_id": "7.08",
+      "title": "Capstone design review",
+      "objective": "Architecture decision record, failure drills and senior-level presentation",
+      "module_id": "module-7",
+      "order": 8,
+      "category": "practical_lab",
+      "path": "lessons/module-07/08-capstone-design-review.md",
+      "status": "planned",
+      "prerequisites": [],
+      "prerequisites_status": "to_define_when_written",
+      "next_lesson_id": null,
+      "word_count": 0,
+      "validation": {
+        "content": "not_written"
       }
     }
   ],
@@ -55,31 +1871,83 @@
     "textbook": {
       "path": "System_Design_Fullstack_Masterclass.md",
       "status": "partial_built",
-      "lesson_count": 1,
+      "lesson_count": 2,
       "includes_exercise_solutions": true,
       "content_parity": "passed",
-      "local_links": "passed"
+      "local_links": "passed",
+      "prose_word_count": 8865
     },
     "html": {
       "path": "System_Design_Fullstack_Course.html",
       "status": "partial_built",
-      "lesson_count": 1,
+      "lesson_count": 2,
       "includes_exercise_solutions": true,
       "content_parity": "passed",
       "internal_links": "passed",
       "external_runtime_dependencies": 0,
       "embedded_diagrams": 2,
-      "automated_tests": "passed_4_tests",
+      "automated_tests": "passed_6_content_tests_and_4_state_tests",
       "browser_checks": {
-        "desktop_and_mobile_layout": "passed",
-        "search_and_solution_navigation": "passed",
-        "progress_and_theme_persistence": "passed",
-        "progress_reset_and_cancellation": "passed",
-        "capacity_calculator": "passed",
+        "desktop_and_mobile_layout": "passed_1440x960_and_390x844",
+        "search_and_solution_navigation": "passed_written_and_planned_states",
+        "progress_and_theme_persistence": "completion_and_text_size_passed_after_reload",
+        "progress_reset_and_cancellation": "previous_batch_passed_no_behavior_change",
+        "capacity_calculator": "previous_batch_passed_no_contract_change",
         "progress_export": "ui_feedback_checked_download_file_not_inspected",
         "direct_file_protocol": "not_checked_browser_tool_disallows_file_urls",
-        "full_accessibility_audit": "not_performed"
-      }
+        "full_accessibility_audit": "not_performed",
+        "text_size_persistence": "passed_21px_after_reload",
+        "diagram_fit": "passed_840px_desktop_and_331px_phone",
+        "diagram_enlargement": "passed_open_close_and_svg_restoration",
+        "section_index_on_phone": "passed"
+      },
+      "catalog_lesson_count": 98,
+      "reader_default_text_size_px": 20,
+      "reader_content_width_px": 840
     }
+  },
+  "source_provenance": [
+    {
+      "path": "sources/original-masterclass.md",
+      "sha256": "fce5e36200aae7b1200e3697461f6e5937817daf50e537921ee6b79616f9d316"
+    },
+    {
+      "path": "sources/original-course.html",
+      "sha256": "caf7c4cbd9230a254d8615db9be64d9851b273106c639fdac0531b108719f408"
+    }
+  ],
+  "student_profile": {
+    "current_role": "Senior Frontend Engineer",
+    "strengths": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "frontend architecture",
+      "production monitoring",
+      "performance optimization"
+    ],
+    "target": "Senior Full-Stack Engineer who can implement and operate production backends",
+    "backend_stack": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "PostGIS"
+    ],
+    "deployment": [
+      "Railway",
+      "GitHub Actions",
+      "Docker"
+    ],
+    "project": "StopAround",
+    "focus_gaps": [
+      "database internals",
+      "backend design",
+      "concurrency",
+      "distributed systems",
+      "scalability",
+      "consistency",
+      "infrastructure",
+      "production reliability"
+    ]
   }
 }
