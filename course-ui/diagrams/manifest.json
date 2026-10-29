@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Request boundaries & data ownership",
+    "path": "course-ui/diagrams/boundaries.svg",
+    "source": "flowchart LR\n    Browser[Next.js browser client] -->|Search or save over HTTPS| API[FastAPI application]\n    API -->|Read observations and save journeys| DB[(PostgreSQL and PostGIS)]\n    API -->|Route computation with a deadline| Routing[External routing provider]\n    Feed[External fuel observations] --> Importer[Scheduled import process]\n    Importer -->|Validated observations with timestamps| DB"
+  },
+  {
+    "title": "A lost response, a safe retry",
+    "path": "course-ui/diagrams/retries.svg",
+    "source": "sequenceDiagram\n    participant B as Browser\n    participant A as API\n    participant D as Database\n    B->>A: Save journey with operation key K\n    A->>D: Atomically persist journey and result for K\n    D-->>A: Commit acknowledged\n    A--xB: Success response lost\n    B->>A: Retry the same operation key K\n    A->>D: Read committed result for caller and K\n    D-->>A: Existing journey identifier\n    A-->>B: Return original outcome"
+  }
+]

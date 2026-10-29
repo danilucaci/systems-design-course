@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "title": "Senior Full-Stack System Design Masterclass",
+  "updated_on": "2026-10-29",
+  "expected_lesson_count": 98,
+  "curriculum_verified": false,
+  "curriculum_status": "awaiting_original_markdown_and_html",
+  "verified_canonical_lesson_count": 0,
+  "fully_written_provisional_lesson_count": 1,
+  "total_lesson_word_count": 3646,
+  "missing_inputs": [
+    "System_Design_Fullstack_Masterclass.md",
+    "System_Design_Fullstack_Course.html"
+  ],
+  "missing_input_context": "Original 98-lesson baseline versions, not newly generated working exports",
+  "modules": [
+    {
+      "id": "provisional-module-00",
+      "title": "Orientation",
+      "order": 0,
+      "curriculum_mapping_verified": false
+    }
+  ],
+  "lessons": [
+    {
+      "id": "provisional-m0-01",
+      "title": "From frontend features to production systems",
+      "module_id": "provisional-module-00",
+      "order": 1,
+      "category": "introduction",
+      "path": "lessons/module-00/01-from-features-to-systems.md",
+      "status": "written_pending_curriculum_mapping",
+      "prerequisites": [],
+      "next_lesson_id": null,
+      "exercise_solution_path": "exercises/module-00/01-system-boundaries/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-00/01-system-boundaries/load_model.py",
+        "exercises/module-00/01-system-boundaries/test_load_model.py"
+      ],
+      "word_count": 3646,
+      "validation": {
+        "required_sections": "passed",
+        "local_links": "passed",
+        "assessment_question_count": 7,
+        "assessment_answer_count": 7,
+        "mermaid_diagram_count": 2,
+        "mermaid_rendering": "reviewed_equivalent_svgs_rendered_in_browser",
+        "python_tests": "passed_5_tests",
+        "code_listing_parity": "passed",
+        "conceptual_review": "manual_review_passed"
+      }
+    }
+  ],
+  "exports": {
+    "textbook": {
+      "path": "System_Design_Fullstack_Masterclass.md",
+      "status": "partial_built",
+      "lesson_count": 1,
+      "includes_exercise_solutions": true,
+      "content_parity": "passed",
+      "local_links": "passed"
+    },
+    "html": {
+      "path": "System_Design_Fullstack_Course.html",
+      "status": "partial_built",
+      "lesson_count": 1,
+      "includes_exercise_solutions": true,
+      "content_parity": "passed",
+      "internal_links": "passed",
+      "external_runtime_dependencies": 0,
+      "embedded_diagrams": 2,
+      "automated_tests": "passed_4_tests",
+      "browser_checks": {
+        "desktop_and_mobile_layout": "passed",
+        "search_and_solution_navigation": "passed",
+        "progress_and_theme_persistence": "passed",
+        "progress_reset_and_cancellation": "passed",
+        "capacity_calculator": "passed",
+        "progress_export": "ui_feedback_checked_download_file_not_inspected",
+        "direct_file_protocol": "not_checked_browser_tool_disallows_file_urls",
+        "full_accessibility_audit": "not_performed"
+      }
+    }
+  }
+}

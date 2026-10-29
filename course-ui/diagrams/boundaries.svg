@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" role="img" aria-labelledby="boundaries-title boundaries-desc">
+  <title id="boundaries-title">Request boundaries and data ownership</title>
+  <desc id="boundaries-desc">The Next.js browser sends search and save requests over HTTPS to FastAPI. The API reads observations and saves journeys in PostgreSQL and PostGIS, and calls an external routing provider with a deadline. External fuel observations flow through a scheduled import process into the database with validation and timestamps.</desc>
+  <defs><marker id="boundaries-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="arrow-head" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="node" x="25" y="45" width="175" height="76" rx="8"/>
+  <text class="node-label" x="112" y="77" text-anchor="middle">Browser</text><text class="node-small" x="112" y="98" text-anchor="middle">Next.js client</text>
+  <rect class="node-primary" x="320" y="45" width="170" height="76" rx="8"/>
+  <text class="node-primary-label" x="405" y="78" text-anchor="middle">Application</text><text class="node-primary-label" x="405" y="99" text-anchor="middle" style="font-size:11px;font-weight:400">FastAPI</text>
+  <rect class="node" x="605" y="45" width="175" height="76" rx="8"/>
+  <text class="node-label" x="692" y="77" text-anchor="middle">Database</text><text class="node-small" x="692" y="98" text-anchor="middle">PostgreSQL + PostGIS</text>
+  <path class="edge" d="M200 83H320" marker-end="url(#boundaries-arrow)"/><text class="edge-label" x="260" y="57" text-anchor="middle">Search / save</text><text class="edge-label" x="260" y="72" text-anchor="middle">HTTPS</text>
+  <path class="edge" d="M490 83H605" marker-end="url(#boundaries-arrow)"/><text class="edge-label" x="547" y="57" text-anchor="middle">Read observations</text><text class="edge-label" x="547" y="72" text-anchor="middle">Save journeys</text>
+  <rect class="node" x="320" y="205" width="170" height="70" rx="8"/>
+  <text class="node-label" x="405" y="235" text-anchor="middle">Routing provider</text><text class="node-small" x="405" y="255" text-anchor="middle">External dependency</text>
+  <path class="edge" d="M405 121V205" marker-end="url(#boundaries-arrow)"/><text class="edge-label" x="418" y="157">Route computation</text><text class="edge-label" x="418" y="173">with a deadline</text>
+  <rect class="node" x="25" y="325" width="175" height="70" rx="8"/>
+  <text class="node-label" x="112" y="355" text-anchor="middle">Fuel observations</text><text class="node-small" x="112" y="375" text-anchor="middle">External feed</text>
+  <rect class="node" x="320" y="325" width="170" height="70" rx="8"/>
+  <text class="node-label" x="405" y="355" text-anchor="middle">Scheduled import</text><text class="node-small" x="405" y="375" text-anchor="middle">Validate and timestamp</text>
+  <path class="edge" d="M200 360H320" marker-end="url(#boundaries-arrow)"/><text class="edge-label" x="260" y="348" text-anchor="middle">Fuel data</text>
+  <path class="edge" d="M490 360H692V121" marker-end="url(#boundaries-arrow)"/><text class="edge-label" x="704" y="233">Validated</text><text class="edge-label" x="704" y="249">observations</text><text class="edge-label" x="704" y="265">+ timestamps</text>
+</svg>
