@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "title": "Senior Full-Stack System Design Masterclass",
-  "updated_on": "2026-10-29",
+  "updated_on": "2026-10-30",
   "expected_lesson_count": 98,
   "curriculum_verified": true,
   "curriculum_status": "verified_against_both_originals",
-  "verified_canonical_lesson_count": 2,
+  "verified_canonical_lesson_count": 11,
   "fully_written_provisional_lesson_count": 0,
-  "total_lesson_word_count": 7074,
+  "total_lesson_word_count": 30058,
   "missing_inputs": [],
   "missing_input_context": null,
   "modules": [
@@ -82,7 +82,7 @@
       "prerequisites": [],
       "prerequisites_status": "verified",
       "next_lesson_id": "lesson-0-02",
-      "word_count": 3699,
+      "word_count": 3686,
       "validation": {
         "required_sections": "passed",
         "local_links": "passed",
@@ -92,7 +92,8 @@
         "mermaid_rendering": "reviewed_equivalent_svgs_rendered_in_browser",
         "python_tests": "passed_5_tests",
         "code_listing_parity": "passed",
-        "conceptual_review": "manual_review_passed"
+        "conceptual_review": "manual_review_passed",
+        "content": "complete"
       },
       "aliases": [
         "provisional-m0-01"
@@ -119,9 +120,9 @@
       ],
       "prerequisites_status": "verified",
       "next_lesson_id": "lesson-0-03",
-      "word_count": 3375,
+      "word_count": 3362,
       "validation": {
-        "content": "not_written",
+        "content": "complete",
         "required_sections": "passed",
         "assessment_question_count": 7,
         "assessment_answer_count": 7,
@@ -165,14 +166,34 @@
       "order": 1,
       "category": "core_concept",
       "path": "lessons/module-01/01-networking-essentials.md",
-      "status": "planned",
-      "prerequisites": [],
-      "prerequisites_status": "to_define_when_written",
+      "status": "complete",
+      "prerequisites": [
+        "lesson-0-01",
+        "lesson-0-02"
+      ],
+      "prerequisites_status": "verified",
       "next_lesson_id": "lesson-1-02",
-      "word_count": 0,
+      "word_count": 2618,
       "validation": {
-        "content": "not_written"
-      }
+        "content": "complete",
+        "required_sections": "passed",
+        "local_links": "passed",
+        "assessment_question_count": 7,
+        "assessment_answer_count": 7,
+        "mermaid_diagram_count": 1,
+        "mermaid_rendering": "reviewed_equivalent_svgs_rendered_at_desktop_and_phone_sizes",
+        "python_tests": "passed_3_tests",
+        "code_listing_parity": "passed",
+        "conceptual_review": "independent_standards_and_requirements_reviews_passed_after_fixes"
+      },
+      "exercise_solution_path": "exercises/module-01/01-networking-essentials/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-01/01-networking-essentials/network_probe.py",
+        "exercises/module-01/01-networking-essentials/test_network_probe.py"
+      ],
+      "code_listing_paths": [
+        "exercises/module-01/01-networking-essentials/network_probe.py"
+      ]
     },
     {
       "id": "lesson-1-02",
@@ -183,14 +204,33 @@
       "order": 2,
       "category": "core_concept",
       "path": "lessons/module-01/02-api-design.md",
-      "status": "planned",
-      "prerequisites": [],
-      "prerequisites_status": "to_define_when_written",
+      "status": "complete",
+      "prerequisites": [
+        "lesson-1-01"
+      ],
+      "prerequisites_status": "verified",
       "next_lesson_id": "lesson-1-03",
-      "word_count": 0,
+      "word_count": 2582,
       "validation": {
-        "content": "not_written"
-      }
+        "content": "complete",
+        "required_sections": "passed",
+        "local_links": "passed",
+        "assessment_question_count": 7,
+        "assessment_answer_count": 7,
+        "mermaid_diagram_count": 1,
+        "mermaid_rendering": "reviewed_equivalent_svgs_rendered_at_desktop_and_phone_sizes",
+        "python_tests": "passed_8_tests",
+        "code_listing_parity": "passed",
+        "conceptual_review": "independent_standards_and_requirements_reviews_passed_after_fixes"
+      },
+      "exercise_solution_path": "exercises/module-01/02-api-design/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-01/02-api-design/api.py",
+        "exercises/module-01/02-api-design/test_api.py"
+      ],
+      "code_listing_paths": [
+        "exercises/module-01/02-api-design/api.py"
+      ]
     },
     {
       "id": "lesson-1-03",
@@ -201,14 +241,34 @@
       "order": 3,
       "category": "core_concept",
       "path": "lessons/module-01/03-data-modeling.md",
-      "status": "planned",
-      "prerequisites": [],
-      "prerequisites_status": "to_define_when_written",
+      "status": "complete",
+      "prerequisites": [
+        "lesson-1-02"
+      ],
+      "prerequisites_status": "verified",
       "next_lesson_id": "lesson-1-04",
-      "word_count": 0,
+      "word_count": 2697,
       "validation": {
-        "content": "not_written"
-      }
+        "content": "complete",
+        "required_sections": "passed",
+        "local_links": "passed",
+        "assessment_question_count": 7,
+        "assessment_answer_count": 7,
+        "mermaid_diagram_count": 1,
+        "mermaid_rendering": "reviewed_equivalent_svgs_rendered_at_desktop_and_phone_sizes",
+        "python_tests": "passed_3_tests",
+        "code_listing_parity": "passed",
+        "conceptual_review": "independent_standards_and_requirements_reviews_passed_after_fixes"
+      },
+      "exercise_solution_path": "exercises/module-01/03-data-modeling/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-01/03-data-modeling/bootstrap.py",
+        "exercises/module-01/03-data-modeling/schema.sql",
+        "exercises/module-01/03-data-modeling/test_schema.py"
+      ],
+      "code_listing_paths": [
+        "exercises/module-01/03-data-modeling/schema.sql"
+      ]
     },
     {
       "id": "lesson-1-04",
@@ -219,14 +279,35 @@
       "order": 4,
       "category": "core_concept",
       "path": "lessons/module-01/04-caching.md",
-      "status": "planned",
-      "prerequisites": [],
-      "prerequisites_status": "to_define_when_written",
+      "status": "complete",
+      "prerequisites": [
+        "lesson-1-01",
+        "lesson-1-02",
+        "lesson-1-03"
+      ],
+      "prerequisites_status": "verified",
       "next_lesson_id": "lesson-1-05",
-      "word_count": 0,
+      "word_count": 2469,
       "validation": {
-        "content": "not_written"
-      }
+        "content": "complete",
+        "required_sections": "passed",
+        "local_links": "passed",
+        "assessment_question_count": 7,
+        "assessment_answer_count": 7,
+        "mermaid_diagram_count": 1,
+        "mermaid_rendering": "reviewed_equivalent_svgs_rendered_at_desktop_and_phone_sizes",
+        "python_tests": "passed_7_tests",
+        "code_listing_parity": "passed",
+        "conceptual_review": "independent_standards_and_requirements_reviews_passed_after_fixes"
+      },
+      "exercise_solution_path": "exercises/module-01/04-caching/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-01/04-caching/test_ttl_cache.py",
+        "exercises/module-01/04-caching/ttl_cache.py"
+      ],
+      "code_listing_paths": [
+        "exercises/module-01/04-caching/ttl_cache.py"
+      ]
     },
     {
       "id": "lesson-1-05",
@@ -237,14 +318,34 @@
       "order": 5,
       "category": "core_concept",
       "path": "lessons/module-01/05-sharding.md",
-      "status": "planned",
-      "prerequisites": [],
-      "prerequisites_status": "to_define_when_written",
+      "status": "complete",
+      "prerequisites": [
+        "lesson-1-03",
+        "lesson-1-04"
+      ],
+      "prerequisites_status": "verified",
       "next_lesson_id": "lesson-1-06",
-      "word_count": 0,
+      "word_count": 2407,
       "validation": {
-        "content": "not_written"
-      }
+        "content": "complete",
+        "required_sections": "passed",
+        "local_links": "passed",
+        "assessment_question_count": 7,
+        "assessment_answer_count": 7,
+        "mermaid_diagram_count": 1,
+        "mermaid_rendering": "reviewed_equivalent_svgs_rendered_at_desktop_and_phone_sizes",
+        "python_tests": "passed_4_tests",
+        "code_listing_parity": "passed",
+        "conceptual_review": "independent_standards_and_requirements_reviews_passed_after_fixes"
+      },
+      "exercise_solution_path": "exercises/module-01/05-sharding/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-01/05-sharding/shard_model.py",
+        "exercises/module-01/05-sharding/test_shard_model.py"
+      ],
+      "code_listing_paths": [
+        "exercises/module-01/05-sharding/shard_model.py"
+      ]
     },
     {
       "id": "lesson-1-06",
@@ -255,14 +356,33 @@
       "order": 6,
       "category": "core_concept",
       "path": "lessons/module-01/06-consistent-hashing.md",
-      "status": "planned",
-      "prerequisites": [],
-      "prerequisites_status": "to_define_when_written",
+      "status": "complete",
+      "prerequisites": [
+        "lesson-1-05"
+      ],
+      "prerequisites_status": "verified",
       "next_lesson_id": "lesson-1-07",
-      "word_count": 0,
+      "word_count": 2429,
       "validation": {
-        "content": "not_written"
-      }
+        "content": "complete",
+        "required_sections": "passed",
+        "local_links": "passed",
+        "assessment_question_count": 7,
+        "assessment_answer_count": 7,
+        "mermaid_diagram_count": 1,
+        "mermaid_rendering": "reviewed_equivalent_svgs_rendered_at_desktop_and_phone_sizes",
+        "python_tests": "passed_5_tests",
+        "code_listing_parity": "passed",
+        "conceptual_review": "independent_standards_and_requirements_reviews_passed_after_fixes"
+      },
+      "exercise_solution_path": "exercises/module-01/06-consistent-hashing/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-01/06-consistent-hashing/hash_ring.py",
+        "exercises/module-01/06-consistent-hashing/test_hash_ring.py"
+      ],
+      "code_listing_paths": [
+        "exercises/module-01/06-consistent-hashing/hash_ring.py"
+      ]
     },
     {
       "id": "lesson-1-07",
@@ -273,14 +393,35 @@
       "order": 7,
       "category": "core_concept",
       "path": "lessons/module-01/07-cap-theorem.md",
-      "status": "planned",
-      "prerequisites": [],
-      "prerequisites_status": "to_define_when_written",
+      "status": "complete",
+      "prerequisites": [
+        "lesson-1-03",
+        "lesson-1-05",
+        "lesson-1-06"
+      ],
+      "prerequisites_status": "verified",
       "next_lesson_id": "lesson-1-08",
-      "word_count": 0,
+      "word_count": 2539,
       "validation": {
-        "content": "not_written"
-      }
+        "content": "complete",
+        "required_sections": "passed",
+        "local_links": "passed",
+        "assessment_question_count": 7,
+        "assessment_answer_count": 7,
+        "mermaid_diagram_count": 1,
+        "mermaid_rendering": "reviewed_equivalent_svgs_rendered_at_desktop_and_phone_sizes",
+        "python_tests": "passed_4_tests",
+        "code_listing_parity": "passed",
+        "conceptual_review": "independent_standards_and_requirements_reviews_passed_after_fixes"
+      },
+      "exercise_solution_path": "exercises/module-01/07-cap-theorem/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-01/07-cap-theorem/partition_model.py",
+        "exercises/module-01/07-cap-theorem/test_partition_model.py"
+      ],
+      "code_listing_paths": [
+        "exercises/module-01/07-cap-theorem/partition_model.py"
+      ]
     },
     {
       "id": "lesson-1-08",
@@ -291,14 +432,34 @@
       "order": 8,
       "category": "core_concept",
       "path": "lessons/module-01/08-database-indexing.md",
-      "status": "planned",
-      "prerequisites": [],
-      "prerequisites_status": "to_define_when_written",
+      "status": "complete",
+      "prerequisites": [
+        "lesson-1-03",
+        "lesson-1-02"
+      ],
+      "prerequisites_status": "verified",
       "next_lesson_id": "lesson-1-09",
-      "word_count": 0,
+      "word_count": 2514,
       "validation": {
-        "content": "not_written"
-      }
+        "content": "complete",
+        "required_sections": "passed",
+        "local_links": "passed",
+        "assessment_question_count": 7,
+        "assessment_answer_count": 7,
+        "mermaid_diagram_count": 1,
+        "mermaid_rendering": "reviewed_equivalent_svgs_rendered_at_desktop_and_phone_sizes",
+        "python_tests": "passed_1_tests",
+        "code_listing_parity": "passed",
+        "conceptual_review": "independent_standards_and_requirements_reviews_passed_after_fixes"
+      },
+      "exercise_solution_path": "exercises/module-01/08-database-indexing/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-01/08-database-indexing/index_experiment.py",
+        "exercises/module-01/08-database-indexing/test_index_experiment.py"
+      ],
+      "code_listing_paths": [
+        "exercises/module-01/08-database-indexing/index_experiment.py"
+      ]
     },
     {
       "id": "lesson-1-09",
@@ -309,14 +470,35 @@
       "order": 9,
       "category": "core_concept",
       "path": "lessons/module-01/09-numbers-to-know.md",
-      "status": "planned",
-      "prerequisites": [],
-      "prerequisites_status": "to_define_when_written",
+      "status": "complete",
+      "prerequisites": [
+        "lesson-1-01",
+        "lesson-1-04",
+        "lesson-1-08"
+      ],
+      "prerequisites_status": "verified",
       "next_lesson_id": "lesson-2-01",
-      "word_count": 0,
+      "word_count": 2755,
       "validation": {
-        "content": "not_written"
-      }
+        "content": "complete",
+        "required_sections": "passed",
+        "local_links": "passed",
+        "assessment_question_count": 7,
+        "assessment_answer_count": 7,
+        "mermaid_diagram_count": 1,
+        "mermaid_rendering": "reviewed_equivalent_svgs_rendered_at_desktop_and_phone_sizes",
+        "python_tests": "passed_3_tests",
+        "code_listing_parity": "passed",
+        "conceptual_review": "independent_standards_and_requirements_reviews_passed_after_fixes"
+      },
+      "exercise_solution_path": "exercises/module-01/09-numbers-to-know/SOLUTION.md",
+      "executable_paths": [
+        "exercises/module-01/09-numbers-to-know/capacity.py",
+        "exercises/module-01/09-numbers-to-know/test_capacity.py"
+      ],
+      "code_listing_paths": [
+        "exercises/module-01/09-numbers-to-know/capacity.py"
+      ]
     },
     {
       "id": "lesson-2-01",
@@ -1871,35 +2053,39 @@
     "textbook": {
       "path": "System_Design_Fullstack_Masterclass.md",
       "status": "partial_built",
-      "lesson_count": 2,
+      "lesson_count": 11,
       "includes_exercise_solutions": true,
       "content_parity": "passed",
       "local_links": "passed",
-      "prose_word_count": 8865
+      "prose_word_count": 35156
     },
     "html": {
       "path": "System_Design_Fullstack_Course.html",
       "status": "partial_built",
-      "lesson_count": 2,
+      "lesson_count": 11,
       "includes_exercise_solutions": true,
       "content_parity": "passed",
       "internal_links": "passed",
       "external_runtime_dependencies": 0,
-      "embedded_diagrams": 2,
+      "embedded_diagrams": 11,
       "automated_tests": "passed_6_content_tests_and_4_state_tests",
       "browser_checks": {
-        "desktop_and_mobile_layout": "passed_1440x960_and_390x844",
-        "search_and_solution_navigation": "passed_written_and_planned_states",
-        "progress_and_theme_persistence": "completion_and_text_size_passed_after_reload",
+        "desktop_and_mobile_layout": "passed_1280x720_and_390x844",
+        "search_and_solution_navigation": "passed_written_CAP_planned_Kafka_and_revealed_answers_and_worked_solution",
+        "progress_and_theme_persistence": "completion_survived_reload_test_record_undone_light_and_dark_checked",
         "progress_reset_and_cancellation": "previous_batch_passed_no_behavior_change",
         "capacity_calculator": "previous_batch_passed_no_contract_change",
         "progress_export": "ui_feedback_checked_download_file_not_inspected",
         "direct_file_protocol": "not_checked_browser_tool_disallows_file_urls",
         "full_accessibility_audit": "not_performed",
         "text_size_persistence": "passed_21px_after_reload",
-        "diagram_fit": "passed_840px_desktop_and_331px_phone",
-        "diagram_enlargement": "passed_open_close_and_svg_restoration",
-        "section_index_on_phone": "passed"
+        "diagram_fit": "all_9_module1_diagrams_fit_840px_desktop_and_331px_phone_no_labels_outside",
+        "diagram_enlargement": "passed_1114px_desktop_900px_scrollable_phone_escape_and_svg_restoration",
+        "section_index_on_phone": "passed_exercise_navigation_100px_below_viewport_top",
+        "checked_on": "2026-10-30",
+        "text_size_controls": "passed_20px_to_21px_to_20px",
+        "diagram_reading_position": "native_coordinate_open_and_escape_restored_exact_scroll_position",
+        "preview_image": "course-ui/module1-review.png"
       },
       "catalog_lesson_count": 98,
       "reader_default_text_size_px": 20,

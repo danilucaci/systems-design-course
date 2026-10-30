@@ -231,16 +231,22 @@
   $$('[data-enlarge-diagram]').forEach(button => button.addEventListener('click', () => {
     const figure = button.closest('figure');
     const svg = $('svg', figure);
+    const position = { x: scrollX, y: scrollY };
     const placeholder = document.createElement('div');
     placeholder.style.height = svg.getBoundingClientRect().height + 'px';
     svg.replaceWith(placeholder);
-    enlargedDiagram = { svg, placeholder };
+    enlargedDiagram = { svg, placeholder, button, position };
     $('#diagram-title').textContent = $('figcaption strong', figure).textContent;
     $('#diagram-content').append(svg);
     $('#diagram-dialog').showModal();
   }));
   $('#diagram-dialog').addEventListener('close', () => {
-    if (enlargedDiagram) { enlargedDiagram.placeholder.replaceWith(enlargedDiagram.svg); enlargedDiagram = null; }
+    if (enlargedDiagram) {
+      const { svg, placeholder, button, position } = enlargedDiagram;
+      placeholder.replaceWith(svg); enlargedDiagram = null;
+      button.focus({ preventScroll: true });
+      scrollTo(position.x, position.y);
+    }
   });
   $$('.copy-code').forEach(button => button.addEventListener('click', async () => {
     const code = $('code', button.closest('figure'));

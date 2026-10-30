@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 340" role="img" aria-labelledby="m1-08-title m1-08-desc">
+<title id="m1-08-title">Database indexing</title><desc id="m1-08-desc">Owner filter and newest 20 leads to Planner and statistics. Planner and statistics leads to Ordered composite index scan. Ordered composite index scan leads to Heap visibility and payload. Heap visibility and payload leads to Return bounded page.</desc>
+<defs><marker id="m1-08-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="arrow-head" d="M0 0 10 5 0 10z"/></marker></defs>
+<path class="edge" d="M240 64.0L310 64.0" marker-end="url(#m1-08-arrow)"/>
+<path class="edge" d="M530 64.0L600 64.0" marker-end="url(#m1-08-arrow)"/>
+<path class="edge" d="M710.0 108L710.0 220" marker-end="url(#m1-08-arrow)"/>
+<path class="edge" d="M600 264.0L530 264.0" marker-end="url(#m1-08-arrow)"/>
+<rect class="node" x="20" y="20" width="220" height="88" rx="7"/>
+<text class="node-label" x="130.0" y="59.0" text-anchor="middle" style="font-size:20px">Owner filter and</text>
+<text class="node-label" x="130.0" y="83.0" text-anchor="middle" style="font-size:20px">newest 20</text>
+<rect class="node" x="310" y="20" width="220" height="88" rx="7"/>
+<text class="node-label" x="420.0" y="59.0" text-anchor="middle" style="font-size:20px">Planner and</text>
+<text class="node-label" x="420.0" y="83.0" text-anchor="middle" style="font-size:20px">statistics</text>
+<rect class="node-primary" x="600" y="20" width="220" height="88" rx="7"/>
+<text class="node-primary-label" x="710.0" y="59.0" text-anchor="middle" style="font-size:20px">Ordered composite</text>
+<text class="node-primary-label" x="710.0" y="83.0" text-anchor="middle" style="font-size:20px">index scan</text>
+<rect class="node" x="600" y="220" width="220" height="88" rx="7"/>
+<text class="node-label" x="710.0" y="259.0" text-anchor="middle" style="font-size:20px">Heap visibility and</text>
+<text class="node-label" x="710.0" y="283.0" text-anchor="middle" style="font-size:20px">payload</text>
+<rect class="node" x="310" y="220" width="220" height="88" rx="7"/>
+<text class="node-label" x="420.0" y="271.0" text-anchor="middle" style="font-size:20px">Return bounded page</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 360" role="img" aria-labelledby="m1-07-title m1-07-desc">
+<title id="m1-07-title">CAP theorem</title><desc id="m1-07-desc">Communication unavailable leads to Write completes at A. Write completes at A leads to B: reject authoritative read. Write completes at A leads to B: return local stale value. B: return local stale value leads to Repair and deterministic merge.</desc>
+<defs><marker id="m1-07-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="arrow-head" d="M0 0 10 5 0 10z"/></marker></defs>
+<path class="edge" d="M240 179.0L310 179.0" marker-end="url(#m1-07-arrow)"/>
+<path class="edge" d="M530 179.0L600 64.0" marker-end="url(#m1-07-arrow)"/>
+<path class="edge" d="M530 179.0L600 289.0" marker-end="url(#m1-07-arrow)"/>
+<path class="edge" d="M600 289.0L530 289.0" marker-end="url(#m1-07-arrow)"/>
+<rect class="node" x="20" y="135" width="220" height="88" rx="7"/>
+<text class="node-label" x="130.0" y="174.0" text-anchor="middle" style="font-size:20px">Communication</text>
+<text class="node-label" x="130.0" y="198.0" text-anchor="middle" style="font-size:20px">unavailable</text>
+<rect class="node-primary" x="310" y="135" width="220" height="88" rx="7"/>
+<text class="node-primary-label" x="420.0" y="174.0" text-anchor="middle" style="font-size:20px">Write completes at</text>
+<text class="node-primary-label" x="420.0" y="198.0" text-anchor="middle" style="font-size:20px">A</text>
+<rect class="node" x="600" y="20" width="220" height="88" rx="7"/>
+<text class="node-label" x="710.0" y="59.0" text-anchor="middle" style="font-size:20px">B: reject</text>
+<text class="node-label" x="710.0" y="83.0" text-anchor="middle" style="font-size:20px">authoritative read</text>
+<rect class="node" x="600" y="245" width="220" height="88" rx="7"/>
+<text class="node-label" x="710.0" y="284.0" text-anchor="middle" style="font-size:20px">B: return local</text>
+<text class="node-label" x="710.0" y="308.0" text-anchor="middle" style="font-size:20px">stale value</text>
+<rect class="node" x="310" y="245" width="220" height="88" rx="7"/>
+<text class="node-label" x="420.0" y="284.0" text-anchor="middle" style="font-size:20px">Repair and</text>
+<text class="node-label" x="420.0" y="308.0" text-anchor="middle" style="font-size:20px">deterministic merge</text>
+</svg>

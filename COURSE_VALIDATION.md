@@ -1,75 +1,60 @@
-# Course validation — current batch
+# Course validation — Module 1 batch
 
-Validated on 2026-10-29. The course is incomplete; two lessons are fully written.
+Validated on 2026-10-30. Module 1 is complete; the full course remains a working edition.
 
 ## Content and curriculum
 
-| Measure | Result |
-|---|---:|
-| Verified syllabus lessons | 98 |
-| Modules | 8 |
-| Fully written lessons | 2 |
-| Planned lessons without placeholder files | 96 |
-| Canonical lesson word count, excluding fenced blocks | 7,074 |
-| Combined textbook word estimate, including worked solutions | 8,865 |
-| Substantial exercises / worked solutions | 2 / 2 |
-| Assessment questions / separate answers | 14 / 14 |
-| Embedded SVG diagrams | 2 |
-| Additional text data-flow diagram | 1 |
-| Local Markdown links and fragments checked | 66 |
+| Measure | Current total | Module 1 batch |
+|---|---:|---:|
+| Verified syllabus lessons | 98 | 9 original topics preserved |
+| Written lessons | 11 | 9 |
+| Planned lessons without placeholder files | 87 | 0 |
+| Canonical prose word estimate | 30,058 | 23,010 |
+| Exercises and separate worked solutions | 11 each | 9 each |
+| Assessment questions and reasoned answers | 77 each | 63 each |
+| Embedded SVG diagrams | 11 | 9 |
 
-Word counts are mechanical estimates outside fenced blocks and include headings, link destinations, and export anchor markup where present. They are a depth signal, not proof of teaching quality.
+Prose counts exclude fenced blocks and include headings and link text/destinations. They are depth indicators, not quality gates. Every new core-concept lesson is approximately 2,400–2,800 words by this method and has all twelve required second-level sections. The validator checks section order, question/answer numbering, local links and fragments, canonical code listing parity, diagram registrations/XML, absent planned files, and manifest/export count consistency.
 
-Written lessons:
+The preserved original source hashes still match the manifest. All 98 IDs, titles, objectives, module assignments, and order remain preserved. Module 0 has two of three lessons written; Module 1 has nine of nine. No planned lesson has a fabricated placeholder file.
 
-- [0.01 — Introduction](lessons/module-00/01-from-features-to-systems.md): 3,699 words.
-- [0.02 — How to prepare](lessons/module-00/02-how-to-prepare.md): 3,375 words.
+## Automated and execution checks
 
-Both lessons have the required eleven content sections, a separate assessment-solutions section, seven questions and seven model answers, a substantial exercise, a separate worked solution, and an executable example.
+All 59 automated tests passed: 38 Module 1 lab checks with actual PostgreSQL 18.6, ten Node HTML/reader-state checks, two textbook checks, and nine existing Module 0 exercise checks. The separate canonical lesson validator passed without word-count warnings. Its warning branch and structural failure behavior were also exercised during independent review.
 
-The two preserved originals match on all 98 IDs, titles, objectives, module assignments, and order. Their hashes were verified. No lessons were removed or merged, including the eight practical full-stack labs. All planned lesson paths remain absent; the syllabus records are metadata, not fabricated lesson content.
+The API checks use real transactions in uniquely named test schemas and remove only their own schemas. They cover duplicate concurrent creations, original response snapshots, cross-user isolation, bounded pagination, lock timeout, and a failed operation-record insert rolling back its journey. Schema tests cover composite ownership references, constraint rollback, and optimistic versions. No database checks were skipped.
 
-## Automated checks
+The cache tests use events and a controlled expiry clock, plus an asynchronous loader-timeout check. The shard/hash/CAP examples test the specified local histories and placement properties; they do not claim distributed crash durability. Capacity tests verify unit-aware arithmetic and rejected nonphysical inputs.
 
-- Six HTML/content checks: source paragraph/heading/table/code preservation; offline assets; internal anchors without duplicate IDs; accurate export metadata; planned lesson catalogues without placeholder articles; and study controls without promotional panels.
-- Four reader-state checks: sequential stale-tab updates preserve completion; storage failures propagate; provisional IDs and anchors migrate; and invalid stored preferences are normalized.
-- Two textbook checks: every written lesson and solution survives assembly, including code blocks; navigation is rebased without rewriting code.
-- Four concurrency-probe checks: bounded active work without dropped operations, different overlap under serial/wide limits, zero work, and invalid inputs.
-- Five capacity-model checks passed. Together with the other suites, all 21 automated tests passed in this batch.
-- The new probe printed completed=10 with maximum-active values of 1, 2, and 10 for the respective limits. These are local scheduling results, not production performance benchmarks.
-- Canonical Python listings match their executable files. Both manifest source hashes, planned/written file status, and current local file links were checked.
+The API also ran through its actual command-line entry point with successful synthetic HTTP requests. The networking script completed a verified HTTPS request with a bounded body sample. The index experiment recorded actual before/after JSON plans for 100,000 synthetic rows; tests leave sequential scans enabled and avoid exact timing assertions.
 
-## Reader and browser checks
+Both exports preserve canonical paragraphs, headings, tables, code, and complete worked solutions. Code indentation/newlines remain exact. Generated IDs are unique, internal links resolve, all 98 syllabus records remain available, and planned items have no content articles. Runtime scripts/styles/assets are embedded without external dependencies or background API calls. External reference links still require internet access.
 
-The reader now uses 20px default body text, adjustable from 18px to 24px, with 1.8 line height. Code and table text follow the reading-size control. A 21px preference survived reload; code measured 17px at the restored 20px body setting. The main reading area is approximately 840px wide on a desktop viewport.
+## Browser checks
 
-Desktop checks used 1440 × 960; phone checks used 390 × 844. The phone document had no horizontal overflow. The section index remained available, opened, and navigated to the exercise. The full 98-lesson syllabus is available through Contents; planned entries are clearly marked.
+Checked in the in-app browser at 1280 × 720 and a 390 × 844 viewport. Body prose measured 20px; controls changed it to 21px and back to 20px. Desktop content measured 840px. Phone SVG containers measured 331px with no forced horizontal overflow. All nine new diagrams had no text outside the SVG bounds after fixing the cache arrow label.
 
-The reported diagram clipping was reproduced: a 900px SVG inside a 700px viewport. After the fix, both diagrams measured 840px within an 840px desktop container and 331px within a 331px phone container. Default diagrams fit without forced horizontal scrolling. Enlarge opens a separate view and returns the same SVG to the document on close without duplicated IDs.
+Enlarge displayed an 1114px SVG on desktop and a horizontally scrollable 900px SVG on the phone-sized viewport. Close and Escape restored the same SVG without duplicate IDs. Native-coordinate open/close preserved the exact page scroll position. Phone section-index navigation placed the exercise below the sticky header.
 
-Navigation between lessons 0.01 and 0.02 works. Search found the planned Database indexing lesson and labeled it as not yet written. Existing hidden-solution search behavior and disclosure markup are retained. Completion changed to 1/2, survived reload, and its test record was cleared. No browser warning or error logs were reported during the current checks.
+Search returned the written CAP lesson and labeled Kafka as planned. Assessment answers and the separate worked solution opened correctly. A temporary completion mark survived reload and was undone. Light and dark themes were inspected. The default viewport was restored after testing.
 
-There are no external runtime scripts, styles, fonts, images, API calls, or diagram-rendering services. The source Mermaid blocks are paired with reviewed SVG equivalents; unsupported new diagram sources fail the build rather than disappearing silently.
+## Review and limitations
 
-## Remaining limits
+Independent standards and requirements reviews completed. The standards P3 word-count gate was fixed and confirmed; the requirements review had no actionable findings. See [the review report](MODULE_1_REVIEW.md) for corrections and evidence.
 
-The other 96 lessons still need full teaching content. The next writing batch is 0.03 — Delivery framework. The final textbook/course definition of done is not satisfied.
+The full course is not complete: 87 lessons remain planned, including 0.03. Direct file-protocol interactions, other browser engines, physical devices, full accessibility/print audits, production load/failover, and deployment were not tested. The HTML supports offline reading; full lab tests remain repository files. Progress import is not implemented, and progress-download contents were not inspected end to end. Local storage does not guarantee transactional concurrent edits across tabs.
 
-The browser tool disallows direct file URLs, so browser interactions were checked through a temporary loopback HTTP preview. Direct-file storage behavior and additional browser engines have not been verified. Storage is local to the browser and file/origin.
+## Reproduce
 
-Reader-state tests cover sequential stale-tab changes. Local storage is not a cross-process transactional database; simultaneous conflicting writes do not have a distributed-consistency guarantee.
-
-Progress JSON export is available; progress import is not implemented. The downloaded file was not inspected end to end. A full accessibility audit, real mobile devices, print behavior, cancellation of the toy Python workload, and real API/database/deployment integrations were not tested.
-
-## Re-run
-
-~~~sh
+```bash
+python3 scripts/validate_lessons.py
+python3 scripts/build_module1_diagrams.py
 python3 scripts/build_textbook.py
 node scripts/build_course.mjs
 node --test scripts/test_course.mjs scripts/test_reader_state.mjs
 python3 -m unittest discover -s scripts -v
 python3 -m unittest discover -s exercises/module-00/01-system-boundaries -v
 python3 -m unittest discover -s exercises/module-00/02-how-to-prepare -v
-~~~
+```
 
-See [CHECKPOINT.md](CHECKPOINT.md) for the next small writing batch.
+For Module 1 dependencies, PostgreSQL, and the 38 lab checks, follow [the lab guide](exercises/module-01/README.md). Browser proof is saved in [module1-review.png](course-ui/module1-review.png). Temporary services started for verification were stopped afterward.

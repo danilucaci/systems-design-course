@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 340" role="img" aria-labelledby="m1-06-title m1-06-desc">
+<title id="m1-06-title">Consistent hashing</title><desc id="m1-06-desc">Stable key bytes leads to Deterministic hash. Deterministic hash leads to Inclusive successor on ring. Inclusive successor on ring leads to Physical owner. Physical owner leads to Separate transfer and fencing.</desc>
+<defs><marker id="m1-06-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="arrow-head" d="M0 0 10 5 0 10z"/></marker></defs>
+<path class="edge" d="M240 64.0L310 64.0" marker-end="url(#m1-06-arrow)"/>
+<path class="edge" d="M530 64.0L600 64.0" marker-end="url(#m1-06-arrow)"/>
+<path class="edge" d="M710.0 108L710.0 220" marker-end="url(#m1-06-arrow)"/>
+<path class="edge" d="M600 264.0L530 264.0" marker-end="url(#m1-06-arrow)"/>
+<rect class="node" x="20" y="20" width="220" height="88" rx="7"/>
+<text class="node-label" x="130.0" y="71.0" text-anchor="middle" style="font-size:20px">Stable key bytes</text>
+<rect class="node" x="310" y="20" width="220" height="88" rx="7"/>
+<text class="node-label" x="420.0" y="71.0" text-anchor="middle" style="font-size:20px">Deterministic hash</text>
+<rect class="node-primary" x="600" y="20" width="220" height="88" rx="7"/>
+<text class="node-primary-label" x="710.0" y="59.0" text-anchor="middle" style="font-size:20px">Inclusive successor</text>
+<text class="node-primary-label" x="710.0" y="83.0" text-anchor="middle" style="font-size:20px">on ring</text>
+<rect class="node" x="600" y="220" width="220" height="88" rx="7"/>
+<text class="node-label" x="710.0" y="271.0" text-anchor="middle" style="font-size:20px">Physical owner</text>
+<rect class="node" x="310" y="220" width="220" height="88" rx="7"/>
+<text class="node-label" x="420.0" y="259.0" text-anchor="middle" style="font-size:20px">Separate transfer</text>
+<text class="node-label" x="420.0" y="283.0" text-anchor="middle" style="font-size:20px">and fencing</text>
+</svg>

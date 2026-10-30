@@ -8,5 +8,50 @@
     "title": "A lost response, a safe retry",
     "path": "course-ui/diagrams/retries.svg",
     "source": "sequenceDiagram\n    participant B as Browser\n    participant A as API\n    participant D as Database\n    B->>A: Save journey with operation key K\n    A->>D: Atomically persist journey and result for K\n    D-->>A: Commit acknowledged\n    A--xB: Success response lost\n    B->>A: Retry the same operation key K\n    A->>D: Read committed result for caller and K\n    D-->>A: Existing journey identifier\n    A-->>B: Return original outcome"
+  },
+  {
+    "title": "1.01 · Networking essentials",
+    "path": "course-ui/diagrams/module1-01.svg",
+    "source": "flowchart LR\n    Browser[Browser] -->|resolve name| DNS[DNS resolver]\n    Browser -->|HTTPS| Edge[CDN or reverse proxy]\n    Edge -->|origin| API[FastAPI]\n    API -->|query| DB[PostgreSQL]"
+  },
+  {
+    "title": "1.02 · API design",
+    "path": "course-ui/diagrams/module1-02.svg",
+    "source": "flowchart LR\n    Client[Client with operation key] --> Auth[Authenticate and authorize]\n    Auth --> Transaction[Database transaction]\n    Transaction --> Journey[Journey and response snapshot]\n    Journey --> Commit[Commit before response]"
+  },
+  {
+    "title": "1.03 · Data modeling",
+    "path": "course-ui/diagrams/module1-03.svg",
+    "source": "flowchart LR\n    User[User identity] --> Journey[Owned journey]\n    Journey --> Stop[Ordered journey stops]\n    User --> Request[Owner and operation key]\n    Request --> Journey"
+  },
+  {
+    "title": "1.04 · Caching",
+    "path": "course-ui/diagrams/module1-04.svg",
+    "source": "flowchart LR\n    Reader[Authorized reader] --> Cache[Scoped TTL cache]\n    Cache -->|miss: bounded singleflight| Origin[Authoritative origin]\n    Origin -->|fill accepted value| Cache\n    Writer[Writer] -->|commit first| Origin\n    Writer -->|then invalidate| Cache"
+  },
+  {
+    "title": "1.05 · Sharding",
+    "path": "course-ui/diagrams/module1-05.svg",
+    "source": "flowchart LR\n    Owner[Current owner and epoch] --> Freeze[Freeze and drain bucket]\n    Freeze --> Copy[Copy and verify state]\n    Copy --> Cutover[Publish next owner epoch]\n    Cutover --> Fence[Reject stale routes]"
+  },
+  {
+    "title": "1.06 · Consistent hashing",
+    "path": "course-ui/diagrams/module1-06.svg",
+    "source": "flowchart LR\n    Key[Stable key bytes] --> Hash[Deterministic hash]\n    Hash --> Ring[Inclusive successor on ring]\n    Ring --> Owner[Physical owner]\n    Owner --> Transfer[Separate transfer and fencing]"
+  },
+  {
+    "title": "1.07 · CAP theorem",
+    "path": "course-ui/diagrams/module1-07.svg",
+    "source": "flowchart LR\n    Partition[Communication unavailable] --> Write[Write completes at A]\n    Write --> Strong[B: reject authoritative read]\n    Write --> Local[B: return local stale value]\n    Local --> Heal[Repair and deterministic merge]"
+  },
+  {
+    "title": "1.08 · Database indexing",
+    "path": "course-ui/diagrams/module1-08.svg",
+    "source": "flowchart LR\n    Query[Owner filter and newest 20] --> Planner[Planner and statistics]\n    Planner --> Scan[Ordered composite index scan]\n    Scan --> Heap[Heap visibility and payload]\n    Heap --> Result[Return bounded page]"
+  },
+  {
+    "title": "1.09 · Numbers to know",
+    "path": "course-ui/diagrams/module1-09.svg",
+    "source": "flowchart LR\n    Intent[Logical requests per second] --> Attempts[Multiply by mean attempts]\n    Attempts --> Concurrency[Mean time gives in-flight work]\n    Attempts --> Capacity[Utilization gives capacity target]\n    Writes[Sustained distinct writes] --> Storage[Bytes, retention, copies]"
   }
 ]

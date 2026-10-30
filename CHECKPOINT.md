@@ -1,28 +1,24 @@
 # Continuation checkpoint
 
-Current batch: verified the full original syllabus, mapped the introduction, wrote lesson 0.02, and simplified the HTML into a personal reading tool.
+Completed batch: all nine Module 1 lessons, their runnable labs and worked solutions, both regenerated exports, and independent standards/requirements reviews. Final verification date: 2026-10-30.
 
 ## Saved work
 
-- Both original source files are preserved in sources/, with hashes in the manifest.
-- All 98 lessons across eight modules are catalogued with their original titles and order.
-- Lessons 0.01 and 0.02 are complete, including exercises, separate solutions, seven assessment answers each, and executable examples.
-- The Markdown textbook and standalone HTML reader contain both full lessons.
-- The HTML has 20px adjustable reading text, quiet light/dark themes, a phone-accessible section index, and the full syllabus with planned lessons clearly identified.
-- Progress writes use current stored state; failed writes get accurate feedback. Legacy provisional IDs migrate. Font size and reading position are saved.
+- All 98 original syllabus entries remain intact across eight modules; original source hashes still match.
+- Eleven lessons are complete: 0.01, 0.02, and 1.01–1.09. The other 87 remain planned, including 0.03.
+- Module 1 has 23,010 estimated prose words, nine embedded diagrams, nine practical exercises/solutions, and 63 assessment questions/answers.
+- Real FastAPI/PostgreSQL labs and local models live in exercises/module-01. Its README documents pinned dependencies, isolated database setup, execution, model boundaries, and cleanup.
+- All 59 automated tests and the canonical validator passed. Review findings were fixed. Detailed evidence and limits are in MODULE_1_REVIEW.md and COURSE_VALIDATION.md.
+- The personal reader retains 20px adjustable text, an 840px desktop column, quiet themes, full syllabus, search, hidden solutions, and local progress. Nine new SVGs were checked at desktop and phone widths. Diagram closing restores reading position.
 
 ## Next small batch
 
-Write 0.03 — Delivery framework, the final lesson in Module 0. Cover requirements, entities, API contracts, request/data flows, a simple initial architecture, and selecting the most useful deep dives. Include a realistic worked example, failure reasoning, substantial exercise, and separate assessment answers.
+The earliest unfinished lesson is 0.03 — Delivery framework. Finish it to close Module 0 if the user asks to continue in curriculum order. Module 2 begins with 2.01 — Core database; write it when that module is requested. Do not interpret a request for one lesson as authorization to write the entire remaining course at once.
 
-Do not write Module 1 in the same batch unless the user asks for a larger batch. After completing 0.03, validate it, update counts and navigation, and rebuild both exports.
+Use the canonical A–K contract in CONTENT_SPEC.md and teach for the profile in STUDENT_PROFILE.md. Preserve original identities and distinguish planned content from written lessons. Add complete examples with explicit limits and verify code on real dependencies where relevant.
 
-## Implementation constraints
+Rebuild both exports and update manifest counts, COURSE_TOC.md, and validation reports after each batch. Word-count outliers warn; substantive and structural review remains necessary. New Mermaid requires authored/reviewed offline SVG equivalents. The Module 1 generator handles only its nine declared figures and is not a general Mermaid renderer.
 
-Keep every original syllabus entry. Do not generate placeholder lesson files. Every new lesson needs the complete section contract in CONTENT_SPEC.md and honest validation status.
+## Review limits
 
-Use the existing reader styling. The learner asked for reading comfort and clarity, with no promotional framing. Keep body text large and the study controls simple.
-
-The reader-state tests cover stale-tab updates, storage failure propagation, ID migration, and input validation. New Mermaid sources require reviewed offline SVG equivalents before the HTML build will accept them.
-
-Direct file URL browser automation is unavailable. Use a temporary loopback preview for UI checks and stop it afterward. Do not wait indefinitely for browser download events; report limits accurately.
+The standalone page is an offline reader, not an embedded Python/database environment or complete lab archive. Test files remain in the repository. Direct file-protocol behavior, other browsers, full accessibility audits, production load/failover, and deployments remain unverified. Temporary API/database/preview services were stopped after verification.

@@ -1,6 +1,6 @@
 # Course table of contents
 
-Verified against both original source files. All 98 lesson identities and their order are preserved. Two lessons are fully written; the rest are planned. Planned entries are syllabus records, not placeholder lessons.
+Verified against both original source files. All 98 lesson identities and their order are preserved. Eleven lessons are fully written, including all nine in Module 1; the remaining 87 are planned. Planned entries are syllabus records, not placeholder lessons.
 
 <a id="module-0"></a>
 
@@ -30,55 +30,55 @@ Verified against both original source files. All 98 lesson identities and their 
 
 <a id="lesson-1-01"></a>
 
-- **1.01 — Networking essentials** · Planned
+- **[1.01 — Networking essentials](lessons/module-01/01-networking-essentials.md)** · Written
 
   DNS, TCP, TLS, HTTP, CDNs, latency, timeouts.
 
 <a id="lesson-1-02"></a>
 
-- **1.02 — API design** · Planned
+- **[1.02 — API design](lessons/module-01/02-api-design.md)** · Written
 
   REST, resource contracts, auth, idempotency, pagination, versioning.
 
 <a id="lesson-1-03"></a>
 
-- **1.03 — Data modeling** · Planned
+- **[1.03 — Data modeling](lessons/module-01/03-data-modeling.md)** · Written
 
   Entities, relationships, constraints, normalization, transactions.
 
 <a id="lesson-1-04"></a>
 
-- **1.04 — Caching** · Planned
+- **[1.04 — Caching](lessons/module-01/04-caching.md)** · Written
 
   Cache placement, TTL, invalidation, consistency, stampedes.
 
 <a id="lesson-1-05"></a>
 
-- **1.05 — Sharding** · Planned
+- **[1.05 — Sharding](lessons/module-01/05-sharding.md)** · Written
 
   Partition keys, hotspots, rebalancing, operational cost.
 
 <a id="lesson-1-06"></a>
 
-- **1.06 — Consistent hashing** · Planned
+- **[1.06 — Consistent hashing](lessons/module-01/06-consistent-hashing.md)** · Written
 
   Distribution, virtual nodes, scale-in/out.
 
 <a id="lesson-1-07"></a>
 
-- **1.07 — CAP theorem** · Planned
+- **[1.07 — CAP theorem](lessons/module-01/07-cap-theorem.md)** · Written
 
   Consistency, availability, partitions, eventual convergence.
 
 <a id="lesson-1-08"></a>
 
-- **1.08 — Database indexing** · Planned
+- **[1.08 — Database indexing](lessons/module-01/08-database-indexing.md)** · Written
 
   B-trees, composite indexes, query plans, write overhead.
 
 <a id="lesson-1-09"></a>
 
-- **1.09 — Numbers to know** · Planned
+- **[1.09 — Numbers to know](lessons/module-01/09-numbers-to-know.md)** · Written
 
   Throughput, latency, storage, rough capacity estimates.
 

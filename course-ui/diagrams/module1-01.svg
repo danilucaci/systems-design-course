@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 320" role="img" aria-labelledby="m1-01-title m1-01-desc">
+<title id="m1-01-title">Networking essentials</title><desc id="m1-01-desc">Browser leads to DNS resolver (resolve name). Browser leads to CDN or reverse proxy (HTTPS). CDN or reverse proxy leads to FastAPI (origin). FastAPI leads to PostgreSQL (query).</desc>
+<defs><marker id="m1-01-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="arrow-head" d="M0 0 10 5 0 10z"/></marker></defs>
+<path class="edge" d="M130.0 190L130.0 108" marker-end="url(#m1-01-arrow)"/>
+<text class="edge-label" x="130.0" y="137.0" text-anchor="middle" style="font-size:17px;paint-order:stroke;stroke:var(--paper);stroke-width:6px;stroke-linejoin:round">resolve name</text>
+<path class="edge" d="M240 234.0L310 234.0" marker-end="url(#m1-01-arrow)"/>
+<text class="edge-label" x="275.0" y="222.0" text-anchor="middle" style="font-size:17px;paint-order:stroke;stroke:var(--paper);stroke-width:6px;stroke-linejoin:round">HTTPS</text>
+<path class="edge" d="M530 234.0L600 234.0" marker-end="url(#m1-01-arrow)"/>
+<text class="edge-label" x="565.0" y="222.0" text-anchor="middle" style="font-size:17px;paint-order:stroke;stroke:var(--paper);stroke-width:6px;stroke-linejoin:round">origin</text>
+<path class="edge" d="M710.0 190L710.0 108" marker-end="url(#m1-01-arrow)"/>
+<text class="edge-label" x="710.0" y="137.0" text-anchor="middle" style="font-size:17px;paint-order:stroke;stroke:var(--paper);stroke-width:6px;stroke-linejoin:round">query</text>
+<rect class="node" x="20" y="190" width="220" height="88" rx="7"/>
+<text class="node-label" x="130.0" y="241.0" text-anchor="middle" style="font-size:20px">Browser</text>
+<rect class="node" x="20" y="20" width="220" height="88" rx="7"/>
+<text class="node-label" x="130.0" y="71.0" text-anchor="middle" style="font-size:20px">DNS resolver</text>
+<rect class="node" x="310" y="190" width="220" height="88" rx="7"/>
+<text class="node-label" x="420.0" y="229.0" text-anchor="middle" style="font-size:20px">CDN or reverse</text>
+<text class="node-label" x="420.0" y="253.0" text-anchor="middle" style="font-size:20px">proxy</text>
+<rect class="node-primary" x="600" y="190" width="220" height="88" rx="7"/>
+<text class="node-primary-label" x="710.0" y="241.0" text-anchor="middle" style="font-size:20px">FastAPI</text>
+<rect class="node" x="600" y="20" width="220" height="88" rx="7"/>
+<text class="node-label" x="710.0" y="71.0" text-anchor="middle" style="font-size:20px">PostgreSQL</text>
+</svg>

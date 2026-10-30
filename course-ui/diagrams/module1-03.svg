@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 360" role="img" aria-labelledby="m1-03-title m1-03-desc">
+<title id="m1-03-title">Data modeling</title><desc id="m1-03-desc">User identity leads to Owned journey. Owned journey leads to Ordered journey stops. User identity leads to Owner and operation key. Owner and operation key leads to Owned journey.</desc>
+<defs><marker id="m1-03-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="arrow-head" d="M0 0 10 5 0 10z"/></marker></defs>
+<path class="edge" d="M240 179.0L310 64.0" marker-end="url(#m1-03-arrow)"/>
+<path class="edge" d="M530 64.0L600 64.0" marker-end="url(#m1-03-arrow)"/>
+<path class="edge" d="M240 179.0L310 289.0" marker-end="url(#m1-03-arrow)"/>
+<path class="edge" d="M420.0 245L420.0 108" marker-end="url(#m1-03-arrow)"/>
+<rect class="node" x="20" y="135" width="220" height="88" rx="7"/>
+<text class="node-label" x="130.0" y="186.0" text-anchor="middle" style="font-size:20px">User identity</text>
+<rect class="node-primary" x="310" y="20" width="220" height="88" rx="7"/>
+<text class="node-primary-label" x="420.0" y="71.0" text-anchor="middle" style="font-size:20px">Owned journey</text>
+<rect class="node" x="600" y="20" width="220" height="88" rx="7"/>
+<text class="node-label" x="710.0" y="59.0" text-anchor="middle" style="font-size:20px">Ordered journey</text>
+<text class="node-label" x="710.0" y="83.0" text-anchor="middle" style="font-size:20px">stops</text>
+<rect class="node" x="310" y="245" width="220" height="88" rx="7"/>
+<text class="node-label" x="420.0" y="284.0" text-anchor="middle" style="font-size:20px">Owner and operation</text>
+<text class="node-label" x="420.0" y="308.0" text-anchor="middle" style="font-size:20px">key</text>
+</svg>

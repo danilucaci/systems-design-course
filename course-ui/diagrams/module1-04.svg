@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 360" role="img" aria-labelledby="m1-04-title m1-04-desc">
+<title id="m1-04-title">Caching</title><desc id="m1-04-desc">Authorized reader leads to Scoped TTL cache. Scoped TTL cache leads to Authoritative origin (miss: bounded singleflight). Authoritative origin leads to Scoped TTL cache (fill accepted value). Writer leads to Authoritative origin (commit first). Writer leads to Scoped TTL cache (then invalidate).</desc>
+<defs><marker id="m1-04-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="arrow-head" d="M0 0 10 5 0 10z"/></marker></defs>
+<path class="edge" d="M240 94.0L310 94.0" marker-end="url(#m1-04-arrow)"/>
+<path class="edge" d="M530 75L600 75" marker-end="url(#m1-04-arrow)"/>
+<text class="edge-label" x="565" y="25" text-anchor="middle" style="font-size:17px;paint-order:stroke;stroke:var(--paper);stroke-width:6px;stroke-linejoin:round">miss: bounded singleflight</text>
+<path class="edge" d="M600 115L530 115" marker-end="url(#m1-04-arrow)"/>
+<text class="edge-label" x="565" y="165" text-anchor="middle" style="font-size:17px;paint-order:stroke;stroke:var(--paper);stroke-width:6px;stroke-linejoin:round">fill accepted value</text>
+<path class="edge" d="M530 289L710 138" marker-end="url(#m1-04-arrow)"/>
+<text class="edge-label" x="710" y="210" text-anchor="middle" style="font-size:17px;paint-order:stroke;stroke:var(--paper);stroke-width:6px;stroke-linejoin:round">commit first</text>
+<path class="edge" d="M420.0 245L420.0 138" marker-end="url(#m1-04-arrow)"/>
+<text class="edge-label" x="420.0" y="179.5" text-anchor="middle" style="font-size:17px;paint-order:stroke;stroke:var(--paper);stroke-width:6px;stroke-linejoin:round">then invalidate</text>
+<rect class="node" x="20" y="50" width="220" height="88" rx="7"/>
+<text class="node-label" x="130.0" y="101.0" text-anchor="middle" style="font-size:20px">Authorized reader</text>
+<rect class="node-primary" x="310" y="50" width="220" height="88" rx="7"/>
+<text class="node-primary-label" x="420.0" y="101.0" text-anchor="middle" style="font-size:20px">Scoped TTL cache</text>
+<rect class="node" x="600" y="50" width="220" height="88" rx="7"/>
+<text class="node-label" x="710.0" y="89.0" text-anchor="middle" style="font-size:20px">Authoritative</text>
+<text class="node-label" x="710.0" y="113.0" text-anchor="middle" style="font-size:20px">origin</text>
+<rect class="node" x="310" y="245" width="220" height="88" rx="7"/>
+<text class="node-label" x="420.0" y="296.0" text-anchor="middle" style="font-size:20px">Writer</text>
+</svg>

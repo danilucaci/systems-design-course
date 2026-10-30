@@ -11,9 +11,11 @@ const data = JSON.parse(html.match(/<script type="application\/json" id="course-
 const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'course-manifest.json'), 'utf8'));
 const marked = new Marked();
 const plain = input => input.replace(/<[^>]*>/g, '').replace(/&(?:amp|lt|gt|quot|#39);/g, entity => ({ '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'" })[entity]).replace(/\s+/g, ' ').trim();
+const codeText = input => input.replace(/<[^>]*>/g, '').replace(/&(?:amp|lt|gt|quot|#39);/g, entity => ({ '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'" })[entity]);
 
 test('every canonical paragraph, heading, table cell, and code block is included', () => {
   const rendered = plain(markup);
+  const listings = [...markup.matchAll(/<pre[^>]*><code[^>]*>([\s\S]*?)<\/code><\/pre>/g)].map(match => codeText(match[1]));
   let checked = 0;
   for (const lesson of manifest.lessons) {
     if (!data.lessons.some(item => item.id === lesson.id)) continue;
@@ -23,6 +25,7 @@ test('every canonical paragraph, heading, table cell, and code block is included
         if (['paragraph', 'heading', 'code', 'text'].includes(token.type)) {
           const expected = token.type === 'code' ? token.text.replace(/\s+/g, ' ').trim() : plain(marked.parse(token.raw || ''));
           if (expected) { assert.ok(rendered.includes(expected), `Missing content: ${expected.slice(0, 100)}`); checked++; }
+          if (token.type === 'code' && token.lang !== 'mermaid') assert.ok(listings.includes(token.text), `Code whitespace changed: ${token.text.slice(0, 60)}`);
         }
         if (token.type === 'table') {
           for (const cell of [...token.header, ...token.rows.flat()]) assert.ok(rendered.includes(plain(marked.parse(cell.text))));
@@ -34,9 +37,14 @@ test('every canonical paragraph, heading, table cell, and code block is included
 });
 
 test('standalone page has no external scripts, styles, images, imports, or fetches', () => {
-  assert.doesNotMatch(html, /<(?:script|img|link|iframe|source)\b[^>]*(?:src|href)\s*=/i);
-  assert.doesNotMatch(html, /@import|url\(https?:|\bfetch\(|XMLHttpRequest|WebSocket\(/);
-  assert.equal((markup.match(/<svg[^>]*role="img"/g) || []).length, 2);
+  const runtime = [...html.matchAll(/<script(?![^>]*type="application\/json")[^>]*>([\s\S]*?)<\/script>/g)].map(match => match[1]).join('\n');
+  const styles = [...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map(match => match[1]).join('\n');
+  assert.doesNotMatch(markup, /<(?:script|img|link|iframe|source)\b[^>]*(?:src|href)\s*=/i);
+  assert.doesNotMatch(html, /<script\b[^>]*\bsrc\s*=/i);
+  assert.doesNotMatch(runtime, /\bfetch\(|XMLHttpRequest|WebSocket\(/);
+  assert.doesNotMatch(styles, /@import|url\(https?:/);
+  const expectedDiagrams = manifest.lessons.filter(lesson => lesson.status === 'complete').reduce((total, lesson) => total + lesson.validation.mermaid_diagram_count, 0);
+  assert.equal((markup.match(/<svg[^>]*role="img"/g) || []).length, expectedDiagrams);
   assert.ok(data.markdown.includes('Assessment solutions'));
 });
 
